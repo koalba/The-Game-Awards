@@ -1,0 +1,27 @@
+/* Aquí definimos las Custom properties */
+:root{
+    // Estas son las variables para colores generales
+    --color-principal   : #000AFF;
+    --color-secundario  : #2033ED;
+    --color-texto       : #FFF;
+    --color-accent      : #FF4025;
+    --color-subtexto    : #6F6F6F;
+
+    // Estas son las variables para los fondos
+    --fondo-principal   : #000;
+    --fondo-secundario  : #141414;
+    --fondo-terciario   : #00047B;
+    --form-principal    : #2C2C2C;
+    
+    // Estas son las tipografías
+    --f-principal       : 'Tourney', cursive;
+    --f-secundaria      : Helvetica, Arial, sans-serif;
+}
+    
+/* Las adaptamos al modo oscuro */
+/* @media (prefers-color-scheme: dark) {
+    :root{
+        --negro         : #ececec;
+    
+    }
+}*/
