@@ -30,13 +30,13 @@
     flex-flow: $direction $wrap;
     justify-content: $justify;
     @if $wrap == "nowrap" {
-      align-items: $align;
+    align-items: $align;
     } @else {
-      align-content: $align;
-      align-items: $align;
+    align-content: $align;
+    align-items: $align;
     }
 }
-  
+
 @mixin position($type, $y, $ynum, $x, $xnum) {
 	position: $type;
 	@if $y == "top" {
