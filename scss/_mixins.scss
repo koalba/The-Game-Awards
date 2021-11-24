@@ -43,3 +43,16 @@
 	}
 	gap: $gap ;
 }
+
+@mixin wrap ($width, $maxwidth, $center-vert){
+	width: 		$width;
+	max-width: 	$maxwidth;
+	margin: 	auto;
+	@include flex (row, nowrap, $center-vert, center);
+}
+@mixin flexrowcenter(){
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
