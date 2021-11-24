@@ -15,3 +15,38 @@
 	justify-content: center;
 	align-items: center;
 }
+
+@mixin grid ( $repetirC , $grosorC , $gap , $repetirR : initial, $grosorR : initial ){
+	display					: grid;
+	grid-template-columns	: repeat( $repetirC , $grosorC );
+	@if $repetirR != 'initial' {
+		grid-template-rows	: repeat( $repetirR , $grosorR );
+	}
+	gap: $gap ;
+}
+
+@mixin d-flex($direction, $wrap, $justify, $align) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    @if $wrap == "nowrap" {
+      align-items: $align;
+    } @else {
+      align-content: $align;
+      align-items: $align;
+    }
+}
+  
+@mixin position($type, $y, $ynum, $x, $xnum) {
+	position: $type;
+	@if $y == "top" {
+		top: $ynum;
+	} @else {
+		bottom: $ynum;
+	}
+	@if $x == "left" {
+		left: $xnum;
+	} @else {
+		right: $xnum;
+	}
+}
