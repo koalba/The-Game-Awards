@@ -1,17 +1,179 @@
-@import '_variables' , '_reset' , '_mixins' , '_keyframes';
+@import "_variables", "_reset", "_mixins", "_keyframes";
 
 /* Home de Sergio */
-@import '_home';
+@import "_home";
 
 /* Home de Pablo */
-@import '_news';
+@import "_news";
 
 /* Home de Alba */
-@import '_about';
-
+@import "_about";
 
 // header       margin bottom 120px
-// main         max-width: 1800px, padding 30 width 100% 
+// main         max-width: 1800px, padding 30 width 100%
 // main header  margin top 50px
 // footer       padding top bot 50px
 // footersocial width 300px
+
+.news {
+}
+.header {
+    @include d-flex(row, nowrap, flex-start, center);
+    background: var(--color-principal);
+    min-height: 90px;
+    font-family: var(--f-principal);
+    font-weight: 900;
+    font-style: italic;
+    padding: 0 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    &__wrap {
+        color: var(--color-texto);
+        text-transform: uppercase;
+        @include wrap(100%, 1800px, center);
+    }
+    &__left {
+        @include d-flex(row, nowrap, flex-start, center);
+        width: 70%;
+    }
+    &__h1 {
+        margin-left: -20px;
+    }
+    &__logo{
+        width: 2em;
+        height: 2em;
+    }
+    &__img {
+    }
+    &__nav {
+        margin-left: 35px;
+    }
+    &__ul {
+        @include d-flex(row, nowrap, flex-start, center);
+    }
+    &__li {
+        padding: 1.4em;
+    }
+    &__a {
+        &--signin{
+            @include d-flex(row, nowrap, flex-end, center);
+        }
+    }
+    &__right {
+        @include d-flex(row, nowrap, flex-end, center);
+        width: 30%;
+    }
+    &__span {
+    }
+    &__svg {
+        width: 1em;
+        height: 1em;
+    }
+    &__signin{
+        width: 2em;
+        height: 2em;
+        margin: 0 1em;
+    }
+}
+.main {
+    min-height: 100em;
+    &__bg{
+        background-image: url('/The-Game-Awards/assets/news/img/TGA21_Superhero_Ambient_002\ (1).jpg');
+        background-position: top;
+        background-size: contain;
+        min-height: 100em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+
+
+    }
+    &__wrap {
+        @include wrap(100%, 1800px, center);
+        z-index: 2;
+        background: indigo;
+    }
+    &__header {
+    }
+    &__news {
+    }
+    &__selector {
+    }
+    &__grid {
+    }
+}
+.selector {
+    &__span {
+    }
+    &__ul {
+    }
+    &__all {
+    }
+    &__fechas {
+    }
+    &__svg {
+    }
+    &__li {
+    }
+}
+.grid {
+    &__celdas {
+    }
+    &__celda {
+        background: red;
+        width: 3em;
+        height: 3em;
+    }
+    &__cont {
+    }
+    &__img {
+    }
+    &__texto {
+    }
+    &__fecha {
+    }
+    &__event {
+    }
+}
+.footer {
+    &__social {
+    }
+    &__faq {
+    }
+    &__copy {
+    }
+}
+.social {
+    &__wrap {
+    }
+    &__grid {
+    }
+    &__celda {
+    }
+    &__svg {
+    }
+    &__boton {
+    }
+}
+.izq {
+}
+.dcha {
+}
+.faq {
+    &__wrap {
+    }
+    &__grid {
+    }
+    &__celda {
+    }
+    &__span {
+    }
+}
+.copy {
+    &__span {
+    }
+}

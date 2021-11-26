@@ -5,7 +5,7 @@
 	width: 		$width;
 	max-width: 	$maxwidth;
 	margin: 	auto;
-	@include flex (row, nowrap, $center-vert, center);
+	@include d-flex (row, nowrap, $center-vert, center);
 }
 
 // Este sirve para centrar contenido
