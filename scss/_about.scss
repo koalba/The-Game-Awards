@@ -35,6 +35,10 @@
   &--it {
     font-style: italic;
   }
+
+  &--s {
+    font-size: 0.75rem;
+  }
 }
 
 .button {
@@ -200,7 +204,6 @@ p {
 
     &__img {
       width: 50%;
-      background-color: violet;
     }
 
     &__h3 {
@@ -220,10 +223,72 @@ p {
 
     &::before {
       content: "";
-      @include position(absolute, bottom, 0, left, -0.5rem);
+      @include position(absolute, bottom, 0, left, 0);
       border-style: solid;
       border-width: 0px 0px 60px 60px;
       border-color: transparent transparent rgb(0, 10, 255);
+    }
+  }
+
+  .board {
+    padding: 6rem 0 6rem;
+    background: url(../assets/about/img/TGA21_Superhero_Ambient_003b_Dusty_Clean.jpg)
+      center / cover no-repeat fixed;
+
+    &__article {
+      max-width: 525px;
+      margin-bottom: 4rem;
+    }
+
+    &__h3 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin: 0.75rem 0;
+    }
+
+    &__ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3.5rem;
+    }
+
+    &__li {
+      @include d-flex(row, nowrap, flex-start, auto);
+      & > * {
+        width: 50%;
+      }
+    }
+
+    &__img {
+      filter: grayscale(100%);
+      background-color: var(--fondo-principal);
+
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+
+    &__info {
+      position: relative;
+      padding-left: 1.25rem;
+    }
+
+    &__name {
+      font-size: 1.4rem;
+      padding: 0.5rem 0;
+      text-transform: uppercase;
+    }
+
+    .note {
+      line-height: 1;
+    }
+
+    &__svg {
+      @include position(absolute, bottom, 0, left, 1.25rem);
+      max-width: 4.5rem;
+      filter: grayscale(100%);
     }
   }
 }
