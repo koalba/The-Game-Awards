@@ -160,9 +160,10 @@ body {
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
+  line-height: 0.9;
 }
 .title--outline {
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .subtitle {
@@ -170,7 +171,18 @@ body {
   font-size: 1.75rem;
   font-weight: 900;
   text-transform: uppercase;
+  line-height: normal;
   letter-spacing: 0.05em;
+}
+
+.note {
+  font-family: var(--f-principal);
+  font-weight: 900;
+  line-height: 2;
+  text-transform: uppercase;
+}
+.note--it {
+  font-style: italic;
 }
 
 .button {
@@ -188,10 +200,14 @@ body {
   display: block;
   width: 100%;
 }
+.button--rrss {
+  padding: 0.5em;
+}
 
 p {
   font-family: var(--f-secundaria);
   font-weight: normal;
+  line-height: 1.4;
 }
 
 .header {
@@ -352,7 +368,7 @@ p {
           box-shadow: inset 0px 2px 0px 0px white;
 }
 .about .media {
-  padding: 4rem 0;
+  padding: 4rem 0 10rem;
 }
 .about .media__ul {
   display: -webkit-box;
@@ -375,10 +391,51 @@ p {
 .about .media__img {
   margin: 2rem 0 1rem;
 }
-.about .media__note {
-  font-family: var(--f-principal);
-  font-weight: 900;
-  line-height: 2;
-  text-transform: uppercase;
+.about .media .note {
   margin-bottom: 1rem;
+}
+.about .host {
+  position: relative;
+  padding: 7rem 0 10rem;
+  background-color: var(--fondo-secundario);
+}
+.about .host .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.about .host__img {
+  width: 50%;
+  background-color: violet;
+}
+.about .host__h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0.75rem 0 1.75rem;
+}
+.about .host__p:last-of-type {
+  margin: 1.25rem 0 1.5rem;
+}
+.about .host__article {
+  width: 40%;
+  margin-left: 4%;
+}
+.about .host::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -0.5rem;
+  border-style: solid;
+  border-width: 0px 0px 60px 60px;
+  border-color: transparent transparent #000aff;
 }

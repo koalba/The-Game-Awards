@@ -10,9 +10,10 @@
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
+  line-height: 0.9;
 
   &--outline {
-    font-weight: normal;
+    font-weight: 300;
   }
 }
 
@@ -21,7 +22,19 @@
   font-size: 1.75rem;
   font-weight: 900;
   text-transform: uppercase;
+  line-height: normal;
   letter-spacing: 0.05em;
+}
+
+.note {
+  font-family: var(--f-principal);
+  font-weight: 900;
+  line-height: 2;
+  text-transform: uppercase;
+
+  &--it {
+    font-style: italic;
+  }
 }
 
 .button {
@@ -39,11 +52,16 @@
     display: block;
     width: 100%;
   }
+
+  &--rrss {
+    padding: 0.5em;
+  }
 }
 
 p {
   font-family: var(--f-secundaria);
   font-weight: normal;
+  line-height: 1.4;
 }
 
 .header {
@@ -152,7 +170,7 @@ p {
   }
 
   .media {
-    padding: 4rem 0;
+    padding: 4rem 0 10rem;
 
     &__ul {
       @include d-flex(row, nowrap, space-between, flex-start);
@@ -166,12 +184,46 @@ p {
       margin: 2rem 0 1rem;
     }
 
-    &__note {
-      font-family: var(--f-principal);
-      font-weight: 900;
-      line-height: 2;
-      text-transform: uppercase;
+    .note {
       margin-bottom: 1rem;
+    }
+  }
+
+  .host {
+    position: relative;
+    padding: 7rem 0 10rem;
+    background-color: var(--fondo-secundario);
+
+    .container {
+      @include d-flex(row, nowrap, flex-start, flex-start);
+    }
+
+    &__img {
+      width: 50%;
+      background-color: violet;
+    }
+
+    &__h3 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin: 0.75rem 0 1.75rem;
+    }
+
+    &__p:last-of-type {
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    &__article {
+      width: 40%;
+      margin-left: 4%;
+    }
+
+    &::before {
+      content: "";
+      @include position(absolute, bottom, 0, left, -0.5rem);
+      border-style: solid;
+      border-width: 0px 0px 60px 60px;
+      border-color: transparent transparent rgb(0, 10, 255);
     }
   }
 }
