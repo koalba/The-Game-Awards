@@ -4,18 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Game Awards</title>
+    <title>About | The Game Awards</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wdth,wght@1,75,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/app.css" />
+
     <script defer src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script defer src="js/app.js"></script>
+
   </head>
   
   <body class="about">
+    <header class="header">
+      <div class="container">
+        <a href="#" title="The Game Awards" class="header__a">
+          <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 44">
+            <path d="m31.229 29.993 1.913-1.848 1.9-5.674-3.8 3.8Zm-4.051-7.512 11.09-11.08-1.58 5.362-9.521 9.274Zm-4.062-3.965-.011 3.546 16.947-16.7 1.58-5.363ZM8.6 28.188l2.45 2.407-1.257 1.257.978 2.558 2.074-2.042 2.257 2.225-3.073 3.063 1 2.536 3.879-3.826 2.139 2.106-4.825 4.825h3.729l3-2.955 3 2.955h3.546L6.649 22.47ZM1.593 5.363 19 22.621l-.011.011-.011 3.546 1.816-1.784 2.332 2.311-.011 3.385 1.73-1.676 2.375 2.354v3.245l1.655-1.612 2.02 2 .989-2.547L0 .011Zm3.428 11.563 9.9 9.79-.011 3.536 1.795-1.773 2.278 2.257-.011 3.482 1.784-1.73 2.364 2.343v3.278l1.666-1.623 3.815 3.783.989-2.547L3.444 11.565Z" fill="#fff">
+            </path>
+          </svg>
+        </a>
+        <nav class="nav">
+          <ul class="nav__ul">
+            <li class="nav__li"><a href="#" title="Home" class="nav__a">Home</a></li>
+            <li class="nav__li"><a href="#" title="News" class="nav__a">News</a></li>
+            <li class="nav__li"><a href="#" title="About" class="nav__a">About</a></li>
+            <li class="nav__li"><a href="#" title="Rewind" class="nav__a">Rewind</a></li>
+            <li class="nav__li"><a href="#" title="Watch" class="nav__a">Watch</a></li>
+            <li class="nav__li"><a href="#" title="Jury" class="nav__a">Jury</a></li>
+            <li class="nav__li"><a href="#" title="Nominees" class="nav__a">Nominees</a></li>
+          </ul>
+        </nav>
+        <button class="header__signin">
+          <span>Sign in</span>
+          <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 32">
+            <path d="M10,10V8A6,6,0,1,1,22,8v2a1,1,0,0,0,1,1v2h2V11a2,2,0,0,0-1-1.73V8A8,8,0,1,0,8,8V9.27A2,2,0,0,0,7,11v2a2,2,0,0,0,1,1.75,8.07,8.07,0,0,0,4,6.16V22.3L4.7,25c-.91.23-4.7,1.37-4.7,4v2a1,1,0,0,0,1,1H15V30H2V29c0-.78,1.92-1.7,3.24-2h.11l8-3A1,1,0,0,0,14,23V20.31a1,1,0,0,0-.57-.9A6,6,0,0,1,10,14a1,1,0,0,0-1-1V11A1,1,0,0,0,10,10Z" fill="#fff"/><path d="M29,16H19a1,1,0,0,0-1,1V27a1,1,0,0,0,.63.93l5,2a1,1,0,0,0,.74,0l5-2A1,1,0,0,0,30,27V17A1,1,0,0,0,29,16ZM23,27.52l-3-1.2V20h3Zm5-1.2-3,1.2V20h3Z" fill="#fff"/>
+          </svg>
+        </button>
+      </div>
+    </header>
 
+    <main class="about__main">
+      
+      <div class="hero">
+        <div class="container">
+          <section class="hero__section">
+            <h1 class="hero__h1">About</h1>
+            <h2 class="hero__h2">The game awards recognizes and upholds creative and technical excellence in the global video game industry.</h2>
+            <p class="hero__p">We bring together a diverse group of game developers, game players, and notable names from popular culture to celebrate and advance gaming’s position as the most immersive, challenging and inspiring form of entertainment. We strive to recognize those who improve the wellbeing of the community and elevate voices that represent the future of the medium.</p>
+          </section>
+        </div>
+        <video class="hero__video" muted autoplay loop playsinline>
+          <source src="assets/about/video/hero-rewind-desktop.mp4" type="video/mp4">
+          <source src="assets/about/video/hero-rewind-desktop.webm" type="video/webm">
+        </video>
+        <ul class="hero__ul">
+          <li class="hero__li active"><a href="#" title="Overview" class="hero__a">Overview</a></li>
+          <li class="hero__li"><a href="#" title="Mediakit" class="hero__a">Mediakit</a></li>
+          <li class="hero__li"><a href="#" title="Host" class="hero__a">Host</a></li>
+          <li class="hero__li"><a href="#" title="Advisory" class="hero__a">Advisory</a></li>
+          <li class="hero__li"><a href="#" title="Press" class="hero__a">Press</a></li>
+          <li class="hero__li"><a href="#" title="Contact" class="hero__a">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="media container">
+        <h2 class="title">Media Kit</h2>
+        <ul class="media__ul">
+          <li class="media__li">
+            <a href="#" title="The Game Awards Poster" class="media__a"><img src="assets/about/img/Mediakit_Thumbnail_01_Trophy_sm.jpg" alt="Image" class="media__img"></a>
+            <p class="subtitle">Poster</p>
+            <p class="media__note">1st Pack Available!</p>
+            <button class="button button--media">Download ZIP</button>
+          </li>
+          <li class="media__li">
+            <a href="" class="media__a"><img src="assets/about/img/Mediakit_Thumbnail_02_Icon_sm.jpg" alt="Image" class="media__img"></a>
+            <p class="subtitle">Trophy</p>
+            <p class="media__note">Designed by Weta</p>
+            <button class="button button--media">Download 3D Model ZIP</button>
+          </li>
+          <li class="media__li">
+            <a href="" class="media__a"><img src="assets/about/img/Mediakit_Thumbnail_03_Poster_sm.jpg" alt="Image" class="media__img"></a>
+            <p class="subtitle">Icon & Logo</p>
+            <p class="media__note">JPG & SVG</p>
+            <button class="button button--media">Download ZIP</button>
+          </li>
+        </ul>
+      </div>
+    </main>
 
   </body>
 </html>
