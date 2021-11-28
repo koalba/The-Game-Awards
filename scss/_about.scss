@@ -2,6 +2,10 @@
   width: 95%;
   max-width: 1500px;
   margin: 0 auto;
+
+  @include media(m) {
+    width: 85%;
+  }
 }
 
 .title {
@@ -14,6 +18,10 @@
 
   &--outline {
     font-weight: 300;
+  }
+
+  @include media(m) {
+    font-size: 2rem;
   }
 }
 
@@ -45,6 +53,14 @@
     line-height: 1;
     margin-bottom: 1rem;
   }
+
+  @include media(m) {
+    font-size: 0.7rem;
+
+    &--m {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .button {
@@ -75,6 +91,12 @@
   &--rrss {
     padding: 0.5em;
   }
+
+  // @include media(m) {
+  //   display: block;
+  //   width: 100%;
+  //   font-size: 0.85rem;
+  // }
 }
 
 p {
@@ -82,6 +104,30 @@ p {
   font-size: 0.95rem;
   font-weight: normal;
   line-height: 1.5;
+
+  @include media(m) {
+    font-size: 0.85rem;
+  }
+}
+
+.dots {
+  @include d-flex(row, nowrap, center, center);
+  @include position(absolute, bottom, 1.75rem, left, 0);
+  width: 100%;
+  &__dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 50%;
+    margin: 0.75rem;
+
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
 }
 
 .header {
@@ -106,6 +152,10 @@ p {
   &__logo {
     width: 2.5rem;
     height: 2.5rem;
+
+    &.mobile {
+      display: none;
+    }
   }
 
   &__signin {
@@ -131,6 +181,28 @@ p {
       display: block;
     }
   }
+
+  @include media(m) {
+    padding: 0.75rem 0;
+
+    &__burger {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &__logo {
+      width: 5rem;
+      height: 2rem;
+
+      &.mobile {
+        display: block;
+      }
+
+      &.desktop {
+        display: none;
+      }
+    }
+  }
 }
 
 .nav {
@@ -142,11 +214,12 @@ p {
   &__li {
     margin-left: 2.5rem;
     padding: 2rem 0;
+    border-top: 3px solid var(--color-principal);
 
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      box-shadow: inset 0px 3px 0px 0px white;
+      border-top: 3px solid currentColor;
     }
   }
 
@@ -210,17 +283,42 @@ p {
     &__li {
       padding: 1rem 0 1.5rem;
       margin: 0 1.5rem;
+      border-top: 2px solid var(--fondo-terciario);
 
       transition: all 0.3s ease-in-out;
 
       &.active {
-        box-shadow: inset 0px 2px 0px 0px white;
+        border-top: 2px solid currentColor;
+      }
+    }
+
+    @include media(m) {
+      &__section {
+        margin: 0;
+      }
+
+      &__h1 {
+        font-size: 4rem;
+      }
+
+      &__h2 {
+        font-size: 1.2rem;
+      }
+
+      &__li {
+        font-size: 0.6rem;
+        margin: 0 0.35rem;
       }
     }
   }
 
   .media {
+    position: relative;
     padding: 4rem 0 10rem;
+
+    &__s-container {
+      overflow-x: scroll;
+    }
 
     &__ul {
       @include d-flex(row, nowrap, space-between, flex-start);
@@ -236,6 +334,18 @@ p {
 
     .note {
       margin-bottom: 1rem;
+    }
+
+    @include media(m) {
+      padding: 3rem 0 9rem;
+
+      &__ul {
+        width: 300%;
+      }
+
+      &__li {
+        width: 33%;
+      }
     }
   }
 
@@ -263,6 +373,7 @@ p {
     }
 
     &__article {
+      position: relative;
       width: 40%;
       margin-left: 4%;
     }
@@ -278,10 +389,39 @@ p {
     .button:hover {
       color: var(--color-subtexto);
     }
+
+    @include media(m) {
+      padding: 0 0 4rem;
+
+      .container {
+        flex-direction: column;
+
+        & > * {
+          width: 100%;
+        }
+      }
+
+      &__img {
+        margin-bottom: 1rem;
+      }
+
+      &__h3 {
+        font-size: 1.25rem;
+        margin: 0.75rem 0 1.25rem;
+      }
+
+      &__p:last-of-type {
+        margin: 0.75rem 0 1rem;
+      }
+
+      .button {
+        @include position(absolute, top, 0, right, 0);
+      }
+    }
   }
 
   .board {
-    padding: 6rem 0 6rem;
+    padding: 6rem 0;
     background: url(../assets/about/img/TGA21_Superhero_Ambient_003b_Dusty_Clean.jpg)
       center / cover no-repeat fixed;
 
@@ -346,11 +486,54 @@ p {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    @include media(m) {
+      padding: 3rem 0;
+      background: url(../assets/about/img/TGA21_Superhero_Ambient_003b_Dusty_Clean-mobile.jpg)
+        center / cover no-repeat fixed;
+
+      &__article {
+        margin-bottom: 2rem;
+      }
+
+      &__h3 {
+        font-size: 1rem;
+      }
+
+      &__ul {
+        gap: 1.5rem;
+      }
+
+      &__li {
+        flex-direction: column;
+        & > * {
+          width: 100%;
+        }
+      }
+
+      &__info {
+        position: relative;
+        padding: 0.75rem 0 0;
+      }
+
+      &__name {
+        font-size: 1rem;
+      }
+
+      &__svg {
+        display: none;
+      }
+    }
   }
 
   .press {
+    position: relative;
     padding: 6rem 0 6rem;
     background-color: var(--fondo-terciario);
+
+    &__s-container {
+      overflow-x: scroll;
+    }
 
     &__ul {
       margin-top: 5rem;
@@ -391,6 +574,24 @@ p {
 
     .note {
       line-height: 1.2;
+    }
+
+    @include media(m) {
+      &__ul {
+        margin-top: 1.5rem;
+        width: 600%;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.3%;
+      }
+
+      &__img-container {
+        height: auto;
+        margin-bottom: 1rem;
+      }
+
+      &__h4 {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 
@@ -445,6 +646,107 @@ p {
       border-style: solid;
       border-width: 0px 0px 60px 60px;
       border-color: transparent transparent transparent var(--fondo-principal);
+    }
+
+    @include media(m) {
+      background: url(../assets/about/img/svg/accent0-triangle.svg) center /
+          contain no-repeat,
+        var(--fondo-secundario);
+
+      .container {
+        flex-direction: column;
+        & > * {
+          width: 100%;
+        }
+      }
+
+      &__ul {
+        padding-top: 3rem;
+      }
+
+      .button {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.footer {
+  font-family: var(--f-secundaria);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  text-align: center;
+  padding: 5rem 0;
+
+  .container {
+    max-width: 370px;
+  }
+
+  &__s-container {
+    width: 16.55rem;
+    margin: 0 auto;
+    position: relative;
+    background: yellowgreen;
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0.75rem;
+    margin: 0 1rem;
+    overflow-x: hidden;
+    background: violet;
+  }
+
+  &__arrow {
+    width: 0.35rem;
+    height: 0.35rem;
+    @include position(absolute, top, calc(50% - 0.35rem), left, 0);
+
+    &.right {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &__decor {
+    display: block;
+    width: 50%;
+    height: 1.25px;
+    margin: 1.75rem auto 0;
+    background-color: var(--color-subtexto);
+  }
+
+  &__ul {
+    @include d-flex(row, wrap, center, center);
+    padding: 1rem 0;
+    color: var(--color-subtexto);
+    border-bottom: 1.25px solid var(--color-subtexto);
+  }
+
+  &__li {
+    width: 50%;
+    padding: 0.5rem 0;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-texto);
+    }
+  }
+
+  &__copy {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    color: var(--color-subtexto);
+    padding-top: 1.75rem;
+  }
+
+  @include media(m) {
+    &__social {
+      overflow-x: scroll;
     }
   }
 }
