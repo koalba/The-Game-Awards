@@ -251,19 +251,7 @@ p {
 }
 
 .dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: none;
   position: absolute;
   bottom: 1.75rem;
   left: 0;
@@ -281,6 +269,23 @@ p {
 }
 .dots__dot.active {
   opacity: 1;
+}
+@media screen and (max-width: 770px) {
+  .dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .header {
@@ -509,9 +514,6 @@ p {
   position: relative;
   padding: 4rem 0 10rem;
 }
-.about .media__s-container {
-  overflow-x: scroll;
-}
 .about .media__ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -526,6 +528,8 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .about .media__li {
   width: 31%;
@@ -539,6 +543,9 @@ p {
 @media screen and (max-width: 770px) {
   .about .media {
     padding: 3rem 0 9rem;
+  }
+  .about .media__s-container {
+    overflow-y: hidden;
   }
   .about .media__ul {
     width: 300%;
@@ -738,9 +745,6 @@ p {
   padding: 6rem 0 6rem;
   background-color: var(--fondo-terciario);
 }
-.about .press__s-container {
-  overflow-x: scroll;
-}
 .about .press__ul {
   margin-top: 5rem;
   display: -ms-grid;
@@ -748,6 +752,8 @@ p {
   -ms-grid-columns: 1fr 7% 1fr 7% 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 7rem 7%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .about .press__a {
   overflow: hidden;
@@ -782,6 +788,9 @@ p {
   line-height: 1.2;
 }
 @media screen and (max-width: 770px) {
+  .about .press__s-container {
+    overflow-y: hidden;
+  }
   .about .press__ul {
     margin-top: 1.5rem;
     width: 600%;
@@ -892,7 +901,6 @@ p {
   width: 16.55rem;
   margin: 0 auto;
   position: relative;
-  background: yellowgreen;
 }
 .footer__social {
   display: -ms-grid;
@@ -902,7 +910,6 @@ p {
   gap: 0.75rem;
   margin: 0 1rem;
   overflow-x: hidden;
-  background: violet;
 }
 .footer__arrow {
   width: 0.35rem;
@@ -911,7 +918,7 @@ p {
   top: calc(50% - 0.35rem);
   left: 0;
 }
-.footer__arrow.right {
+.footer__arrow.der {
   left: auto;
   right: 0;
 }

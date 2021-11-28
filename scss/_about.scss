@@ -111,9 +111,10 @@ p {
 }
 
 .dots {
-  @include d-flex(row, nowrap, center, center);
+  display: none;
   @include position(absolute, bottom, 1.75rem, left, 0);
   width: 100%;
+
   &__dot {
     width: 0.75rem;
     height: 0.75rem;
@@ -127,6 +128,10 @@ p {
     &.active {
       opacity: 1;
     }
+  }
+
+  @include media(m) {
+    @include d-flex(row, nowrap, center, center);
   }
 }
 
@@ -316,12 +321,10 @@ p {
     position: relative;
     padding: 4rem 0 10rem;
 
-    &__s-container {
-      overflow-x: scroll;
-    }
-
     &__ul {
       @include d-flex(row, nowrap, space-between, flex-start);
+
+      transition: all 0.5s ease-in-out;
     }
 
     &__li {
@@ -338,6 +341,10 @@ p {
 
     @include media(m) {
       padding: 3rem 0 9rem;
+
+      &__s-container {
+        overflow-y: hidden;
+      }
 
       &__ul {
         width: 300%;
@@ -531,15 +538,13 @@ p {
     padding: 6rem 0 6rem;
     background-color: var(--fondo-terciario);
 
-    &__s-container {
-      overflow-x: scroll;
-    }
-
     &__ul {
       margin-top: 5rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 7rem 7%;
+
+      transition: all 0.5s ease-in-out;
     }
 
     &__a {
@@ -577,6 +582,10 @@ p {
     }
 
     @include media(m) {
+      &__s-container {
+        overflow-y: hidden;
+      }
+
       &__ul {
         margin-top: 1.5rem;
         width: 600%;
@@ -688,7 +697,6 @@ p {
     width: 16.55rem;
     margin: 0 auto;
     position: relative;
-    background: yellowgreen;
   }
 
   &__social {
@@ -697,7 +705,6 @@ p {
     gap: 0.75rem;
     margin: 0 1rem;
     overflow-x: hidden;
-    background: violet;
   }
 
   &__arrow {
@@ -705,7 +712,7 @@ p {
     height: 0.35rem;
     @include position(absolute, top, calc(50% - 0.35rem), left, 0);
 
-    &.right {
+    &.der {
       left: auto;
       right: 0;
     }
