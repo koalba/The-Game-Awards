@@ -279,10 +279,18 @@ p {
 
     &__ul {
       @include position(absolute, bottom, 0, left, 0);
+      top: auto;
       @include d-flex(row, nowrap, center, center);
       width: 100%;
       background-color: var(--fondo-terciario);
       text-transform: uppercase;
+
+      &.active {
+        position: fixed;
+        z-index: 2;
+        bottom: auto;
+        top: 83px;
+      }
     }
 
     &__li {
