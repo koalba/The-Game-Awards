@@ -1,7 +1,7 @@
 $(document).ready( function(){
     const top = $('.hero__ul').offset().top
-    const menuH = $('.header').height()
-    const secmenuH = $('.hero__ul').height()
+    const menuH = $('.header').outerHeight()
+    const secmenuH = $('.hero__ul').outerHeight()
 
     $(window).scroll(function(){
     
@@ -16,8 +16,10 @@ $(document).ready( function(){
 
         if(pixel + menuH >= top){
             $('.hero__ul').addClass('active')
+            $('.hero__ul.active').css('top',menuH)
         } else if (pixel + menuH < top){
             $('.hero__ul').removeClass('active')
+            $('.hero__ul').css('top','auto')
         }
 
         if(finPixel >= mediaT && finPixel < hostT){
