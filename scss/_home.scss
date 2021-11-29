@@ -1,12 +1,18 @@
 .home{
     *{
         text-transform: uppercase;
-        font-weight: 800;
+        font-weight: 900;
+        font-family: var(--f-principal);
+        font-style: italic;
     }
     .header{
         width: 100%;
         color: white;
         background-color: var( --color-principal);
+        position: fixed; 
+        top: 0;
+        z-index: 2;
+        
         &__centrado{
             width: 100%;
             max-width: 1830px;
@@ -14,12 +20,35 @@
             font-size: 1em;
             @include d-flex(row,nowrap,center,center);
         }
+        &__h1{
+            width: 2em;
+        }
         &__nav{
+            margin-left: 35px;
             width: 80%;
             @include d-flex(row,nowrap, space-between, center);
         }
         &__ul{
             @include d-flex(row,nowrap, space-evenly,center);
+        }
+        &__li{
+            padding: 1.4em;
+        }
+        &__hov{
+            transition:all .5s ease;
+        }
+        &__hov:hover{
+            opacity:.7;
+        }
+        &__restante{
+            width: 100%;
+            background-color: rgba(0,8,213);
+            padding: 3px;
+        }
+        &__centrotexto{
+            width: 100%;
+            margin: auto;
+            text-align: center;
         }
     
     }

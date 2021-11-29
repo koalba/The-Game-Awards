@@ -123,12 +123,17 @@ body {
 /* Home de Sergio */
 .home * {
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 900;
+  font-family: var(--f-principal);
+  font-style: italic;
 }
 .home .header {
   width: 100%;
   color: white;
   background-color: var(--color-principal);
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 .home .header__centrado {
   width: 100%;
@@ -149,7 +154,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.home .header__h1 {
+  width: 2em;
+}
 .home .header__nav {
+  margin-left: 35px;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,6 +188,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.home .header__li {
+  padding: 1.4em;
+}
+.home .header__hov {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.home .header__hov:hover {
+  opacity: 0.7;
+}
+.home .header__restante {
+  width: 100%;
+  background-color: #0008d5;
+  padding: 3px;
+}
+.home .header__centrotexto {
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
 
 /* Home de Pablo */
