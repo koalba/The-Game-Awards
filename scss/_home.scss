@@ -1,11 +1,25 @@
 .home{
+    *{
+        text-transform: uppercase;
+        font-weight: 800;
+    }
     .header{
         width: 100%;
+        color: white;
         background-color: var( --color-principal);
         &__centrado{
             width: 100%;
             max-width: 1830px;
             margin: auto;
+            font-size: 1em;
+            @include d-flex(row,nowrap,center,center);
+        }
+        &__nav{
+            width: 80%;
+            @include d-flex(row,nowrap, space-between, center);
+        }
+        &__ul{
+            @include d-flex(row,nowrap, space-evenly,center);
         }
     
     }
