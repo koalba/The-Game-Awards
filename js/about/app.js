@@ -43,6 +43,16 @@ $(document).ready( function(){
         } 
     })
 
+    $('.header__burger').click(() => {
+        $('.header__burger').addClass('active')
+        $('.nav').addClass('active')
+    })
+
+    $('.nav__close').click(() => {
+        $('.header__burger').removeClass('active')
+        $('.nav').removeClass('active')
+    })
+
     let foto = 0 
     
     $('.media__dots .dots__dot').click(function(){
@@ -63,6 +73,22 @@ $(document).ready( function(){
 
         $('.press__dots .dots__dot').removeClass('active')
         $('.press__dots .dots__dot').eq( foto ).addClass('active')
+    })
+
+    let rrss = 0
+
+    $('.right').click(() => {
+        if(rrss < 4){
+            rrss ++;
+            $('.slider__social').css('transform',`translateX(-${ rrss * 10.1 }%)`)
+        }
+    })
+
+    $('.left').click(() => {
+        if(rrss > 0){
+            rrss --;
+            $('.slider__social').css('transform',`translateX(-${ rrss * 10.1 }%)`)
+        }
     })
 
 })
