@@ -97,36 +97,34 @@ $(document).ready( function(){
     })
 
 
-    function sleep(){
-        setTimeout(() => {
-            console.log("sleep")
-        }, 500);
+
+    let newsScroll = function( elemento){
+
+        let posicion = $('.grid__celda').index( $(elemento) )
+        let tiempo = (posicion % 3) * 250
+
+        animacion( elemento , tiempo )
+
+        $(window).scroll(function(){ 
+            animacion( elemento , tiempo )
+        })
     }
 
-    let newsScroll = function(elemento){
 
-        
-
-        $(window).scroll(function(){
-            
+    let animacion = ( elemento , tiempo ) => {
+        setTimeout(()=>{
             let pixel = $(window).scrollTop()
             let top = $(elemento).offset().top
             let altura = $(window).height()
-            // console.log(pixel +","+ top +","+ altura)
-            
             
             if(pixel >= top - (altura / 1.2)){
-                sleep()
-                $(elemento).addClass('visible')
-                
+                $(elemento).addClass('visible')      
             }
-            
-        })
+        },tiempo)
     }
+    
     for (let cadaElemento of $('.grid__celda')) {
-        sleep()
         newsScroll(cadaElemento)
-        
     }
     
 })

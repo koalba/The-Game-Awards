@@ -256,7 +256,7 @@ body {
   min-height: 100em;
 }
 .main__bg {
-  background-image: url("/The-Game-Awards/assets/news/img/TGA21_Superhero_Ambient_002 (1).jpg");
+  background-image: url("../assets/news/img/TGA21_Superhero_Ambient_002_1.jpg");
   background-position: top;
   background-size: contain;
   min-height: 100em;
