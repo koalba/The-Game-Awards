@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +22,7 @@
   <body class="about">
     <header class="header">
       <div class="container">
-        <button class="header__burger">
+        <button type="button" class="header__burger">
           <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
           </svg>
@@ -38,8 +38,8 @@
         </a>
         <nav class="nav">
           <ul class="nav__ul">
-            <li class="nav__li"><a href="#" title="Home" class="nav__a">Home</a></li>
-            <li class="nav__li"><a href="#" title="News" class="nav__a">News</a></li>
+            <li class="nav__li"><a href="index.html" title="Home" class="nav__a">Home</a></li>
+            <li class="nav__li"><a href="news.html" title="News" class="nav__a">News</a></li>
             <li class="nav__li"><a href="#" title="About" class="nav__a">About</a></li>
             <li class="nav__li"><a href="#" title="Rewind" class="nav__a">Rewind</a></li>
             <li class="nav__li"><a href="#" title="Watch" class="nav__a">Watch</a></li>
@@ -47,7 +47,7 @@
             <li class="nav__li"><a href="#" title="Nominees" class="nav__a">Nominees</a></li>
           </ul>
         </nav>
-        <button class="header__signin">
+        <button type="button" class="header__signin">
           <span>Sign in</span>
           <svg aria-hidden="true" focusable="false" role="img" class="header__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 32">
             <path d="M10,10V8A6,6,0,1,1,22,8v2a1,1,0,0,0,1,1v2h2V11a2,2,0,0,0-1-1.73V8A8,8,0,1,0,8,8V9.27A2,2,0,0,0,7,11v2a2,2,0,0,0,1,1.75,8.07,8.07,0,0,0,4,6.16V22.3L4.7,25c-.91.23-4.7,1.37-4.7,4v2a1,1,0,0,0,1,1H15V30H2V29c0-.78,1.92-1.7,3.24-2h.11l8-3A1,1,0,0,0,14,23V20.31a1,1,0,0,0-.57-.9A6,6,0,0,1,10,14a1,1,0,0,0-1-1V11A1,1,0,0,0,10,10Z" fill="#fff"/><path d="M29,16H19a1,1,0,0,0-1,1V27a1,1,0,0,0,.63.93l5,2a1,1,0,0,0,.74,0l5-2A1,1,0,0,0,30,27V17A1,1,0,0,0,29,16ZM23,27.52l-3-1.2V20h3Zm5-1.2-3,1.2V20h3Z" fill="#fff"/>
@@ -66,7 +66,7 @@
             <p class="hero__p">We bring together a diverse group of game developers, game players, and notable names from popular culture to celebrate and advance gaming’s position as the most immersive, challenging and inspiring form of entertainment. We strive to recognize those who improve the wellbeing of the community and elevate voices that represent the future of the medium.</p>
           </section>
         </div>
-        <video class="hero__video" muted autoplay loop playsinline>
+        <video class="hero__video" muted autoplay loop playsinline loading="lazy">
           <source src="assets/about/video/hero-rewind-desktop.mp4" type="video/mp4">
           <source src="assets/about/video/hero-rewind-desktop.webm" type="video/webm">
         </video>
@@ -88,19 +88,19 @@
               <a href="#" title="The Game Awards Poster" class="media__a"><img src="assets/about/img/Mediakit_Thumbnail_01_Trophy_sm.jpg" alt="Image" class="media__img"></a>
               <p class="subtitle">Poster</p>
               <p class="note">1st Pack Available!</p>
-              <button class="button button--media">Download ZIP</button>
+              <button type="button" title="Download The Game Awards Poster ZIP" class="button button--media">Download ZIP</button>
             </li>
             <li class="media__li">
-              <a href="" class="media__a"><img src="assets/about/img/Mediakit_Thumbnail_02_Icon_sm.jpg" alt="Image" class="media__img"></a>
+              <a href="#" title="The Game Awards Trophy" class="media__a"><img src="assets/about/img/Mediakit_Thumbnail_02_Icon_sm.jpg" alt="Image" class="media__img"></a>
               <p class="subtitle">Trophy</p>
               <p class="note">Designed by Weta</p>
-              <button class="button button--media">Download 3D Model ZIP</button>
+              <button type="button" title="Download The Game Awards Trophy ZIP" class="button button--media">Download 3D Model ZIP</button>
             </li>
             <li class="media__li">
-              <a href="" class="media__a"><img src="assets/about/img/Mediakit_Thumbnail_03_Poster_sm.jpg" alt="Image" class="media__img"></a>
+              <a href="#" title="The Game Awards Icon & Logo" class="media__a"><img src="assets/about/img/Mediakit_Thumbnail_03_Poster_sm.jpg" alt="Image" class="media__img"></a>
               <p class="subtitle">Icon & Logo</p>
               <p class="note">JPG & SVG</p>
-              <button class="button button--media">Download ZIP</button>
+              <button type="button" title="Download The Game Awards Icon & Logo ZIP" class="button button--media">Download ZIP</button>
             </li>
           </ul>
         </div>
@@ -113,14 +113,14 @@
 
       <div id="host" class="host">
         <div class="container">
-          <img src="assets/about/img/TGA2021_Host_Treatment-01.jpg" alt="IMAGE" class="host__img">
+          <img src="assets/about/img/TGA2021_Host_Treatment-01.jpg" alt="Host & Creator Geoff Keighley" loading="lazy" decoding="async" class="host__img">
           <article class="host__article">
             <p class="note note--it">Host & Creator</p>
             <h2 class="title title--outline">Geoff<br>Keighley</h2>
             <h3 class="host__h3">The Game Awards was founded in 2014 by media entrepeneur Geoff Keighley, who also hosts and produces the program.</h3>
             <p class="host__p">Over the past two decades, Keighley has served as a journalist, host, and producer of video game programming across multiple platforms, including print, television and digital.</p>
             <p class="host__p">Keighley is best known for his work with Entertainment Weekly, Spike TV, G4, and YouTube, as well as his landmark series of behind the scenes game development stories known as “The Final Hours.” Geoff also currently produces gamescom's “Opening Night Live” program.</p>
-            <button class="button button--rrss">
+            <button type="button" title="Twitter" class="button button--rrss">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" class="button__svg" viewBox="0 0 16 16">
                 <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
               </svg>
@@ -138,118 +138,118 @@
           </article>
           <ul class="board__ul">
             <li class="board__li">
-              <img src="assets/about/img/member-rob_kostich.jpg" alt="Rob Kostich, president of Activision" class="board__img">
+              <img src="assets/about/img/member-rob_kostich.jpg" alt="Rob Kostich, president of Activision" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Activision</p>
                 <h4 class="board__name">Rob Kostich</h4>
                 <p class="note">President</p>
-                <img src="assets/about/img/svg/logo-activision.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-activision.svg" alt="Activision" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-dr_lisa_su.jpg" alt="Dr. Lisa Su, CEO of AMD" class="board__img">
+              <img src="assets/about/img/member-dr_lisa_su.jpg" alt="Dr. Lisa Su, CEO of AMD" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">AMD</p>
                 <h4 class="board__name">Dr. Lisa Su</h4>
                 <p class="note">CEO</p>
-                <img src="assets/about/img/svg/logo-amd.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-amd.svg" alt="AMD" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-laura_miele.jpg" alt="Laura Miele, Chief Operating Officer in EA" class="board__img">
+              <img src="assets/about/img/member-laura_miele.jpg" alt="Laura Miele, Chief Operating Officer in EA" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">EA</p>
                 <h4 class="board__name">Laura Miele</h4>
                 <p class="note">Chief Operating Officer</p>
-                <img src="assets/about/img/svg/logo-ea.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-ea.svg" alt="EA" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/svg/logo-epic.svg" alt="Epic Games" class="board__img">
+              <img src="assets/about/img/svg/logo-epic.svg" alt="Epic Games" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Epic Games</p>
                 <h4 class="board__name">Epic Games</h4>
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-phil_harrison.jpg" alt="Phil Harrison, VP and GM, Stadia in Google" class="board__img">
+              <img src="assets/about/img/member-phil_harrison.jpg" alt="Phil Harrison, VP and GM, Stadia in Google" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Google</p>
                 <h4 class="board__name">Phil Harrison</h4>
                 <p class="note">VP and GM, Stadia</p>
-                <img src="assets/about/img/svg/logo-stadia.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-stadia.svg" alt="Stadia" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-hideo_kojima.jpg" alt="Hideo Kojima, founder of Kojima Productions" class="board__img">
+              <img src="assets/about/img/member-hideo_kojima.jpg" alt="Hideo Kojima, founder of Kojima Productions" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Kojima Productions</p>
                 <h4 class="board__name">Hideo Kojima</h4>
                 <p class="note">Founder</p>
-                <img src="assets/about/img/svg/logo-kojima_productions.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-kojima_productions.svg" alt="Kojima Productions" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-phil_spencer.jpg" alt="Phil Spencer, EVP in Microsoft" class="board__img">
+              <img src="assets/about/img/member-phil_spencer.jpg" alt="Phil Spencer, EVP in Microsoft" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Microsoft</p>
                 <h4 class="board__name">Phil Spencer</h4>
                 <p class="note">EVP</p>
-                <img src="assets/about/img/svg/logo-microsoft.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-microsoft.svg" alt="Microsoft" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-doug_bowser.jpg" alt="Doug Bowser, President of Nintendo" class="board__img">
+              <img src="assets/about/img/member-doug_bowser.jpg" alt="Doug Bowser, President of Nintendo" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Nintendo</p>
                 <h4 class="board__name">Doug Bowser</h4>
                 <p class="note">President</p>
-                <img src="assets/about/img/svg/logo-nintendo.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-nintendo.svg" alt="Nintendo" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-marc_merril.jpg" alt="Marc Merrill, Co-chairman and co-founder of Riot Games" class="board__img">
+              <img src="assets/about/img/member-marc_merril.jpg" alt="Marc Merrill, Co-chairman and co-founder of Riot Games" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Riot Games</p>
                 <h4 class="board__name">Marc Merrill</h4>
                 <p class="note">Co-chairman and co-founder</p>
-                <img src="assets/about/img/svg/logo-riot.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-riot.svg" alt="Riot Games" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/svg/logo-rockstar.svg" alt="Rockstar Games" class="board__img">
+              <img src="assets/about/img/svg/logo-rockstar.svg" alt="Rockstar Games" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Rockstar Games</p>
                 <h4 class="board__name">Rockstar Games</h4>
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/svg/logo-sony.svg" alt="Sony Interactive Entertainment" class="board__img">
+              <img src="assets/about/img/svg/logo-sony.svg" alt="Sony Interactive Entertainment" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Sony</p>
                 <h4 class="board__name">Sony Interactive Entertainment</h4>
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-steven_ma.jpg" alt="Steven Ma, SVP in Tencent" class="board__img">
+              <img src="assets/about/img/member-steven_ma.jpg" alt="Steven Ma, SVP in Tencent" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Tencent</p>
                 <h4 class="board__name">Steven Ma</h4>
                 <p class="note">SVP</p>
-                <img src="assets/about/img/svg/logo-tencent.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-tencent.svg" alt="Tencent" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/member-yves_guillemot.jpg" alt="Yves Guillemot, CEO of Ubisoft" class="board__img">
+              <img src="assets/about/img/member-yves_guillemot.jpg" alt="Yves Guillemot, CEO of Ubisoft" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">Ubisoft</p>
                 <h4 class="board__name">Yves Guillemot</h4>
                 <p class="note">CEO</p>
-                <img src="assets/about/img/svg/logo-ubisoft.svg" alt="Image" class="board__svg">
+                <img src="assets/about/img/svg/logo-ubisoft.svg" alt="Ubisoft" loading="lazy" decoding="async" class="board__svg">
               </div>
             </li>
             <li class="board__li">
-              <img src="assets/about/img/svg/logo-valve.svg" alt="VALVE" class="board__img">
+              <img src="assets/about/img/svg/logo-valve.svg" alt="VALVE" loading="lazy" decoding="async" class="board__img">
               <div class="board__info">
                 <p class="note note--s">VALVE</p>
                 <h4 class="board__name">VALVE</h4>
@@ -267,16 +267,16 @@
               <li class="press__li">
                 <a href="#" title="Washington Post" class="press__a">
                   <div class="press__img-container">
-                    <img src="assets/about/img/TGA2020_About_Press_WP_thumb.jpg" alt="Image" class="press__img">
+                    <img src="assets/about/img/TGA2020_About_Press_WP_thumb.jpg" alt="Geoff Keighley with a microphone" loading="lazy" decoding="async" class="press__img">
                   </div>
                   <h4 class="press__h4">Washington Post</h4>
-                  <p class="note">"How Geoff Keighlty created The Oscars for gaming"</p>
+                  <p class="note">"How Geoff Keighley created The Oscars for gaming"</p>
                 </a>
               </li>
               <li class="press__li">
                 <a href="#" title="Hollywood Reporter" class="press__a">
                   <div class="press__img-container">
-                    <img src="assets/about/img/TGA2020_About_Press_HollywoodRep_thumb.jpg" alt="Image" class="press__img">
+                    <img src="assets/about/img/TGA2020_About_Press_HollywoodRep_thumb.jpg" alt="Three people on a stage talking" loading="lazy" decoding="async" class="press__img">
                   </div>
                   <h4 class="press__h4">Hollywood Reporter</h4>
                   <p class="note">"How the Game Awards became the video game industry's superbowl"</p>
@@ -285,7 +285,7 @@
               <li class="press__li">
                 <a href="#" title="Variety" class="press__a">
                   <div class="press__img-container">
-                    <img src="assets/about/img/TGA2020_About_Press_VARIETY_thumb.jpg" alt="Image" class="press__img">
+                    <img src="assets/about/img/TGA2020_About_Press_VARIETY_thumb.jpg" alt="Geoff Keighley talking" loading="lazy" decoding="async" class="press__img">
                   </div>
                   <h4 class="press__h4">Variety</h4>
                   <p class="note">"The Game Awards 2019 delivers record viewership"</p>
@@ -294,7 +294,7 @@
               <li class="press__li">
                 <a href="#" title="LA Times" class="press__a">
                   <div class="press__img-container">
-                    <img src="assets/about/img/TGA2020_About_Press_LATIMES_thumb.jpg" alt="Image" class="press__img">
+                    <img src="assets/about/img/TGA2020_About_Press_LATIMES_thumb.jpg" alt="Geoff Keighley" loading="lazy" decoding="async" class="press__img">
                   </div>
                   <h4 class="press__h4">LA Times</h4>
                   <p class="note">"Geoff Keighley's lifelong obdession to create a viode game oscars</p>
@@ -303,7 +303,7 @@
               <li class="press__li">
                 <a href="#" title="Polygon" class="press__a">
                   <div class="press__img-container">
-                    <img src="assets/about/img/polygon.jpg" alt="Image" class="press__img">
+                    <img src="assets/about/img/polygon.jpg" alt="A stadium" loading="lazy" decoding="async" class="press__img">
                   </div>
                   <h4 class="press__h4">Polygon</h4>
                   <p class="note">"I love to create and I will keep creating the Game Awards until the day I die."</p>
@@ -312,7 +312,7 @@
               <li class="press__li">
                 <a href="#" title="Hollywood Reporter" class="press__a">
                   <div class="press__img-container">
-                    <img src="assets/about/img/hollywood_reporter.jpg" alt="Image" class="press__img">
+                    <img src="assets/about/img/hollywood_reporter.jpg" alt="The Game Awards" loading="lazy" decoding="async" class="press__img">
                   </div>
                   <h4 class="press__h4">Hollywood Reporter</h4>
                   <p class="note">"... crafting a show that celebrates the gaming industry but isn't afraid to reinvent itself."</p>
@@ -340,11 +340,11 @@
           <ul class="contact__ul">
             <li class="contact__li">
               <p class="note note--m">Regarding PR & Media</p>
-              <button class="button">gameawards@fortyseven.com</button>
+              <button type="button" class="button">gameawards@fortyseven.com</button>
             </li>
             <li class="contact__li">
               <p class="note note--m">Regarding sponsorship or partnership</p>
-              <button class="button">info@thegameawards.com</button>
+              <button type="button" class="button">info@thegameawards.com</button>
             </li>
           </ul>
         </div>
@@ -355,48 +355,48 @@
       <div class="container">
         <div class="footer__s-container">
           <ul class="footer__social">
-            <li class="footer__rrss"><button class="button button--rrss" title="Instagram">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Instagram">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" class="button__svg" viewBox="0 0 16 16">
                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
               </svg>
             </button></li>
-            <li class="footer__rrss"><button class="button button--rrss" title="Twitter">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Twitter">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" class="button__svg" viewBox="0 0 16 16">
                 <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
               </svg>
             </button></li>
-            <li class="footer__rrss"><button class="button button--rrss" title="Youtube">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Youtube">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" class="button__svg" viewBox="0 0 16 16">
                 <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
               </svg>
             </button></li>
-            <li class="footer__rrss"><button class="button button--rrss" title="Twitch">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Twitch">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" class="button__svg" viewBox="0 0 16 16">
                 <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
                 <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
               </svg>
             </button></li>
-            <li class="footer__rrss"><button class="button button--rrss" title="Facebook">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Facebook">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="button__svg">
                 <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
               </svg>
             </button></li>
-            <li class="footer__rrss"><button class="button button--rrss" title="Snapchat">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Snapchat">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="button__svg">
                 <path fill="currentColor" d="M510.846 392.673c-5.211 12.157-27.239 21.089-67.36 27.318-2.064 2.786-3.775 14.686-6.507 23.956-1.625 5.566-5.623 8.869-12.128 8.869l-.297-.005c-9.395 0-19.203-4.323-38.852-4.323-26.521 0-35.662 6.043-56.254 20.588-21.832 15.438-42.771 28.764-74.027 27.399-31.646 2.334-58.025-16.908-72.871-27.404-20.714-14.643-29.828-20.582-56.241-20.582-18.864 0-30.736 4.72-38.852 4.72-8.073 0-11.213-4.922-12.422-9.04-2.703-9.189-4.404-21.263-6.523-24.13-20.679-3.209-67.31-11.344-68.498-32.15a10.627 10.627 0 0 1 8.877-11.069c69.583-11.455 100.924-82.901 102.227-85.934.074-.176.155-.344.237-.515 3.713-7.537 4.544-13.849 2.463-18.753-5.05-11.896-26.872-16.164-36.053-19.796-23.715-9.366-27.015-20.128-25.612-27.504 2.437-12.836 21.725-20.735 33.002-15.453 8.919 4.181 16.843 6.297 23.547 6.297 5.022 0 8.212-1.204 9.96-2.171-2.043-35.936-7.101-87.29 5.687-115.969C158.122 21.304 229.705 15.42 250.826 15.42c.944 0 9.141-.089 10.11-.089 52.148 0 102.254 26.78 126.723 81.643 12.777 28.65 7.749 79.792 5.695 116.009 1.582.872 4.357 1.942 8.599 2.139 6.397-.286 13.815-2.389 22.069-6.257 6.085-2.846 14.406-2.461 20.48.058l.029.01c9.476 3.385 15.439 10.215 15.589 17.87.184 9.747-8.522 18.165-25.878 25.018-2.118.835-4.694 1.655-7.434 2.525-9.797 3.106-24.6 7.805-28.616 17.271-2.079 4.904-1.256 11.211 2.46 18.748.087.168.166.342.239.515 1.301 3.03 32.615 74.46 102.23 85.934 6.427 1.058 11.163 7.877 7.725 15.859z"></path>
                 </svg>
             </button></li>
-            <li class="footer__rrss"><button class="button button--rrss" title="Discord">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Discord">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" class="button__svg" viewBox="0 0 16 16">
                 <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
               </svg>
             </button></li>
-            <li class="footer__rrss"><button class="button button--rrss" title="Tik Tok">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Tik Tok">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="button__svg">
                 <path fill="currentColor" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path>
               </svg>
             </button></li>
-            <li class="footer__rrss"><button class="button button--rrss" title="Email">
+            <li class="footer__rrss"><button type="button" class="button button--rrss" title="Email">
               <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="button__svg">
                 <path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
               </svg>
