@@ -208,27 +208,27 @@ body {
   width: 100%;
   margin: auto;
   text-align: center;
+  font-style: none;
 }
 .home .fondo {
   color: white;
-  background-color: var(--color-principal);
   width: 100%;
-  min-height: 50vh;
 }
 .home .fondo__video {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
+  width: 100%;
+  max-height: 100vh;
 }
 .home .fondo__caja {
+  position: absolute;
   background-color: red;
   width: 50%;
   min-height: 50vh;
-  position: absolute;
-  top: 0;
+  top: 30%;
   left: 0;
-  margin: auto;
 }
 
 /* Home de Pablo */
