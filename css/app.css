@@ -122,7 +122,6 @@ body {
 
 /* Home de Sergio */
 /* Home de Pablo */
-/* Home de Alba */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,7 +264,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
 }
 .main__wrap {
   width: 100%;
@@ -284,11 +283,113 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
-  background: indigo;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding-top: 9.2em;
+}
+.main__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.main__news {
+  color: var(--color-texto);
+}
+.main__selector {
+  color: var(--color-texto);
+}
+.selector__all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.selector__svg {
+  width: 1em;
+  height: 1em;
+}
+.selector__li {
+  max-height: 0px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  overflow: hidden;
+  -webkit-transition: max-height 0.8s linear;
+  transition: max-height 0.8s linear;
+}
+.selector__li.activo {
+  max-height: 50px;
+}
+
+.grid {
+  width: 100%;
+  padding: 0 30px;
+}
+.grid__celdas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3.2em 1fr 3.2em 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 3.2em;
 }
 .grid__celda {
-  background: red;
-  width: 3em;
-  height: 3em;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
 }
+.grid__celda:hover .grid__img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+.grid__celda.visible {
+  opacity: 1;
+}
+.grid__img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+.grid__texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.grid__fecha {
+  color: var(--color-texto);
+}
+.grid__event {
+  color: var(--color-texto);
+}
+
+/* Home de Alba */

@@ -1,3 +1,201 @@
 .news{
     
 }
+
+.header {
+    @include d-flex(row, nowrap, flex-start, center);
+    background: var(--color-principal);
+    min-height: 90px;
+    font-family: var(--f-principal);
+    font-weight: 900;
+    font-style: italic;
+    padding: 0 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    &__wrap {
+        color: var(--color-texto);
+        text-transform: uppercase;
+        @include wrap(100%, 1800px, center);
+    }
+    &__left {
+        @include d-flex(row, nowrap, flex-start, center);
+        width: 70%;
+    }
+    &__h1 {
+        margin-left: -20px;
+    }
+    &__logo{
+        width: 2em;
+        height: 2em;
+    }
+    &__img {
+    }
+    &__nav {
+        margin-left: 35px;
+    }
+    &__ul {
+        @include d-flex(row, nowrap, flex-start, center);
+    }
+    &__li {
+        padding: 1.4em;
+    }
+    &__a {
+        &--signin{
+            @include d-flex(row, nowrap, flex-end, center);
+        }
+    }
+    &__right {
+        @include d-flex(row, nowrap, flex-end, center);
+        width: 30%;
+    }
+    &__span {
+    }
+    &__svg {
+        width: 1em;
+        height: 1em;
+    }
+    &__signin{
+        width: 2em;
+        height: 2em;
+        margin: 0 1em;
+    }
+}
+.main {
+    min-height: 100em;
+    &__bg{
+        background-image: url('/The-Game-Awards/assets/news/img/TGA21_Superhero_Ambient_002\ (1).jpg');
+        background-position: top;
+        background-size: contain;
+        min-height: 100em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+
+    }
+    &__wrap {
+        @include wrap(100%, 1800px, center);
+        flex-direction: column;
+        padding-top: 9.2em;
+    }
+    &__header {
+        @include d-flex (row, nowrap, space-between, center);
+        width: 100%;
+    }
+    &__news {
+        color: var(--color-texto);
+    }
+    &__selector {
+        color: var(--color-texto);
+
+    }
+    &__grid {
+    }
+}
+.selector {
+    &__span {
+    }
+    &__ul {
+    }
+    &__all {
+        @include d-flex(row, nowrap, space-between, center)
+    }
+    &__fechas {
+    }
+    &__svg {
+        width: 1em;
+        height: 1em;
+    }
+    &__li {
+        max-height: 0px;
+        transform-origin: top;
+        overflow:hidden;
+        transition: max-height .8s linear;
+        &.activo{
+            max-height: 50px;
+        }
+    }
+}
+.grid {
+    width: 100%;
+    padding: 0 30px;
+    &__celdas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        gap: 3.2em;
+    }
+    &__celda {
+        // background: red;
+        // width: 3em;
+        // height: 3em;
+        // position: relative;
+        // top: 0;
+        // z-index: 100000000000;
+        &:hover .grid__img{
+            filter: grayscale(0%);
+        }
+        opacity: 0;
+        transition: opacity .5s linear;
+        &.visible{
+            opacity: 1;
+        }
+    }
+    &__cont {
+    }
+    &__img {
+        filter: grayscale(100%);
+        transition: .5s ease all;
+    }
+    &__texto {
+        @include d-flex (column, nowrap, flex-start,flex-start)
+    }
+    &__fecha {
+        color: var(--color-texto);
+    }
+    &__event {
+        color: var(--color-texto);
+    }
+}
+.footer {
+    &__social {
+    }
+    &__faq {
+    }
+    &__copy {
+    }
+}
+.social {
+    &__wrap {
+    }
+    &__grid {
+    }
+    &__celda {
+    }
+    &__svg {
+    }
+    &__boton {
+    }
+}
+.izq {
+}
+.dcha {
+}
+.faq {
+    &__wrap {
+    }
+    &__grid {
+    }
+    &__celda {
+    }
+    &__span {
+    }
+}
+.copy {
+    &__span {
+    }
+}

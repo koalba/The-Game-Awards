@@ -91,4 +91,43 @@ $(document).ready( function(){
 
     })
 
+
+    $('.selector__fechas--titulo').click(function(){
+        $('.selector__li').toggleClass('activo')
+    })
+
+
+    function sleep(){
+        setTimeout(() => {
+            console.log("sleep")
+        }, 500);
+    }
+
+    let newsScroll = function(elemento){
+
+        
+
+        $(window).scroll(function(){
+            
+            let pixel = $(window).scrollTop()
+            let top = $(elemento).offset().top
+            let altura = $(window).height()
+            // console.log(pixel +","+ top +","+ altura)
+            
+            
+            if(pixel >= top - (altura / 1.2)){
+                sleep()
+                $(elemento).addClass('visible')
+                
+            }
+            
+        })
+    }
+    for (let cadaElemento of $('.grid__celda')) {
+        sleep()
+        newsScroll(cadaElemento)
+        
+    }
+    
 })
+    
