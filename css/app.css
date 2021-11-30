@@ -209,6 +209,27 @@ body {
   margin: auto;
   text-align: center;
 }
+.home .fondo {
+  color: white;
+  background-color: var(--color-principal);
+  width: 100%;
+  min-height: 50vh;
+}
+.home .fondo__video {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.home .fondo__caja {
+  background-color: red;
+  width: 50%;
+  min-height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
 
 /* Home de Pablo */
 /* Home de Alba */

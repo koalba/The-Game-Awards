@@ -52,4 +52,26 @@
         }
     
     }
+    .fondo{
+        color: white;
+        background-color: var( --color-principal);
+        width: 100%;
+        min-height: 50vh;
+        &__video{
+            position: relative;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        &__caja{
+            background-color: red;
+            width: 50%;
+            min-height: 50vh;
+            position: absolute;
+            top: 0;
+            left:0;
+            margin: auto;
+            
+        }
+    }
 }
