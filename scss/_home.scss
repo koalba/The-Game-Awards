@@ -32,7 +32,7 @@
             @include d-flex(row,nowrap, space-evenly,center);
         }
         &__li{
-            padding: 1.4em;
+            padding: 1.4em 1em;
         }
         &__hov{
             transition:all .5s ease;
@@ -69,16 +69,64 @@
         &__caja{
             position: absolute;
             width: 100%;
-            top: 30%;
+            top: 24%;
             left:0;
         }
         &__centrado{
             width: 44%;
+            max-width: 615px;
             margin: auto;
+            text-align: center;
         }
         &__live{
-            padding: 1em 0;
-            font-size: 4.375em;
+            padding: .6em 0;
+            font-size: 3.5em;
+        }
+        &__teatro{
+            font-weight: 800;
+            font-size: 1.8em;
+        }
+        &__boton{
+            width: 50%;
+            margin: auto;
+            font-size: 17px;
+            margin-top: 1.5em;
+            padding: 18px 40px;
+            cursor: pointer;
+            color: white;
+            background-color: var(--color-accent);
+            transition: color 0.4s ease-out 0s;
+        }
+        &__boton:hover{
+            
+            background-color: white;
+        }
+        &__enlace{
+            position: relative;
+        }
+        &__span{
+            opacity: 1;
+            transform: translateY(0%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 50ms, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 10ms;
+        }
+        &__sphover{
+            color: var(--color-accent);
+            position: absolute;
+            left: 50%;
+            opacity: 0;
+            top: 50%;
+            transform: translate(-50%, 50%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+        }
+        &__boton:hover .fondo__span{
+            transform: translateY(-75%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+            opacity: 0;
+        }
+        &__boton:hover .fondo__sphover{
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 50ms, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 10ms;
         }
     }
 }
