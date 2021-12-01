@@ -65,7 +65,7 @@
 .main {
     min-height: 100em;
     &__bg{
-        background-image: url('/The-Game-Awards/assets/news/img/TGA21_Superhero_Ambient_002\ (1).jpg');
+        background-image: url('../assets/news/img/TGA21_Superhero_Ambient_002_1.jpg');
         background-position: top;
         background-size: contain;
         min-height: 100em;
@@ -80,54 +80,86 @@
     &__wrap {
         @include wrap(100%, 1800px, center);
         flex-direction: column;
-        padding-top: 9.2em;
+        width: 100%;
+        padding: 12em 30px;
     }
     &__header {
-        @include d-flex (row, nowrap, space-between, center);
+        @include d-flex (row, nowrap, space-between, flex-start);
         width: 100%;
+        margin-bottom: 5em;
     }
     &__news {
         color: var(--color-texto);
+        font-family: var(--f-principal);
+        font-weight: 900;
+        font-size: 400%;
+        font-style: italic;
+        text-transform: uppercase;
+        margin-top: .5em;
     }
     &__selector {
-        color: var(--color-texto);
+        
 
     }
     &__grid {
     }
 }
 .selector {
+        color: var(--color-texto);
+        font-family: var(--f-principal);
+        font-weight: 900;
+        font-size: 200%;
+        font-style: italic;
+        text-transform: uppercase;
     &__span {
+        font-size: .9rem;
+        line-height: 2.4em;
     }
     &__ul {
+        border: 1px var(--color-texto) solid;
+        padding: .4em;
     }
     &__all {
-        @include d-flex(row, nowrap, space-between, center)
+        @include d-flex(row, nowrap, space-between, center);
+        width: 125px;
     }
     &__fechas {
+        height: 100%;
+        @include d-flex(row, nowrap, flex-start, center);
+
+        &--titulo{
+            font-style: normal;
+            
+            
+        }
     }
     &__svg {
-        width: 1em;
-        height: 1em;
+        width: .8em;
+        height: .8em;
+        margin: 0 .1em;
+        // border: transparent 8px solid;
+        // border-bottom: 8px var(--color-texto) solid;
     }
     &__li {
-        max-height: 0px;
+        height: 0px;
         transform-origin: top;
         overflow:hidden;
-        transition: max-height .8s linear;
+        transition: height .5s linear;
         &.activo{
-            max-height: 50px;
+            height: 50px;
         }
     }
 }
 .grid {
-    width: 100%;
-    padding: 0 30px;
     &__celdas {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
-        gap: 3.2em;
+        gap: 3.1em;
+        @media screen and (max-width:1025px){
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
     }
     &__celda {
         // background: red;
@@ -152,13 +184,23 @@
         transition: .5s ease all;
     }
     &__texto {
-        @include d-flex (column, nowrap, flex-start,flex-start)
+        @include d-flex (column, nowrap, flex-start,flex-start);
+        padding: 2em 0;
     }
     &__fecha {
-        color: var(--color-texto);
+        color: var(--color-subtexto);
+        font-family: var(--f-principal);
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+
     }
     &__event {
         color: var(--color-texto);
+        font-family: var(--f-principal);
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
     }
 }
 .footer {

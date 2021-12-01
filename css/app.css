@@ -256,7 +256,7 @@ body {
   min-height: 100em;
 }
 .main__bg {
-  background-image: url("/The-Game-Awards/assets/news/img/TGA21_Superhero_Ambient_002 (1).jpg");
+  background-image: url("../assets/news/img/TGA21_Superhero_Ambient_002_1.jpg");
   background-position: top;
   background-size: contain;
   min-height: 100em;
@@ -285,7 +285,8 @@ body {
           align-items: center;
   -ms-flex-direction: column;
       flex-direction: column;
-  padding-top: 9.2em;
+  width: 100%;
+  padding: 12em 30px;
 }
 .main__header {
   display: -webkit-box;
@@ -298,16 +299,36 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
+  margin-bottom: 5em;
 }
 .main__news {
   color: var(--color-texto);
+  font-family: var(--f-principal);
+  font-weight: 900;
+  font-size: 400%;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-top: 0.5em;
 }
-.main__selector {
+.selector {
   color: var(--color-texto);
+  font-family: var(--f-principal);
+  font-weight: 900;
+  font-size: 200%;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.selector__span {
+  font-size: 0.9rem;
+  line-height: 2.4em;
+}
+.selector__ul {
+  border: 1px var(--color-texto) solid;
+  padding: 0.4em;
 }
 .selector__all {
   display: -webkit-box;
@@ -323,34 +344,57 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 125px;
+}
+.selector__fechas {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.selector__fechas--titulo {
+  font-style: normal;
 }
 .selector__svg {
-  width: 1em;
-  height: 1em;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0 0.1em;
 }
 .selector__li {
-  max-height: 0px;
+  height: 0px;
   -webkit-transform-origin: top;
           transform-origin: top;
   overflow: hidden;
-  -webkit-transition: max-height 0.8s linear;
-  transition: max-height 0.8s linear;
+  -webkit-transition: height 0.5s linear;
+  transition: height 0.5s linear;
 }
 .selector__li.activo {
-  max-height: 50px;
+  height: 50px;
 }
 
-.grid {
-  width: 100%;
-  padding: 0 30px;
-}
 .grid__celdas {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3.2em 1fr 3.2em 1fr;
+  -ms-grid-columns: 1fr 3.1em 1fr 3.1em 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  gap: 3.2em;
+  gap: 3.1em;
+}
+@media screen and (max-width: 1025px) {
+  .grid__celdas {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .grid__celda {
   opacity: 0;
@@ -384,12 +428,21 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 2em 0;
 }
 .grid__fecha {
-  color: var(--color-texto);
+  color: var(--color-subtexto);
+  font-family: var(--f-principal);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
 }
 .grid__event {
   color: var(--color-texto);
+  font-family: var(--f-principal);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 /* Home de Alba */
