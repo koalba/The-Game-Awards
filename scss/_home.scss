@@ -83,7 +83,7 @@
             font-size: 3.5em;
         }
         &__teatro{
-            font-weight: 800;
+            font-weight: 900;
             font-size: 1.8em;
         }
         &__boton{
@@ -140,5 +140,76 @@
             transform: translateY(0%);
             transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
         }
+        &__fecha{
+            margin-top: 12.5em;
+            width: 100%;
+            height: 7.5em;
+            border: 1px solid white;
+        }
+        &__cajaflex{
+            font-style: normal;
+            margin: 1em auto;
+            width: 90%;
+            @include d-flex(row,nowrap, space-between, center);
+        }
+        &__boton2{
+            width: 90%;
+            margin: auto;
+            font-size: 17px;
+            margin-top: 1.5em;
+            padding: 10px 40px;
+            cursor: pointer;
+            color: white;
+            background-color: var(--color-principal);
+            transition: color 0.6s ease-out 0s;
+            overflow: hidden;
+        }
+        &__boton2:hover{
+            
+            background-color: white;
+        }
+        &__enlace2{
+            width: 100%;
+            height: 100%;          
+            position: relative;
+        }
+        &__span2{
+            width: 100%;
+            height: 100%;
+            //position: absolute;
+            // left: 0;
+            // top: 0;
+            @include d-flex(row,nowrap,center,center);
+            opacity: 1;
+            transform: translateY(0%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
+            
+        }
+        &__sphover2{
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--color-principal);
+            opacity: 0;
+            transform: translateY(50%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+        }
+        &__boton2:hover .fondo__span2{
+            color: var(--color-principal);
+            transform: translateY(-75%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+            opacity: 0;
+        }
+        &__boton2:hover .fondo__sphover2{
+            opacity: 1;
+            color: var(--color-principal);
+            transform: translateY(0%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
+        }
+    }
+    .cajanegra{
+        width: 100%;
+        min-height: 60vh;
+        background-color: black;
     }
 }
