@@ -383,5 +383,8 @@
             &__nombre:focus::placeholder{
                 color:gray;
             }
+            &__label{
+                position: relative;
+            }
         }
 }

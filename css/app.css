@@ -703,6 +703,9 @@ body {
 .home .formulario__nombre:focus::placeholder {
   color: gray;
 }
+.home .formulario__label {
+  position: relative;
+}
 
 /* Home de Pablo */
 /* Home de Alba */
