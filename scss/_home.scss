@@ -1,3 +1,390 @@
 .home{
+    *{
+        text-transform: uppercase;
+        font-weight: 900;
+        font-family: var(--f-principal);
+        font-style: italic;
+    }
+    .header{
+        width: 100%;
+        color: white;
+        background-color: var( --color-principal);
+        position: fixed; 
+        top: 0;
+        z-index: 2;
+        
+        &__centrado{
+            width: 100%;
+            max-width: 1830px;
+            margin: auto;
+            font-size: 1em;
+            @include d-flex(row,nowrap,center,center);
+        }
+        &__h1{
+            width: 2em;
+        }
+        &__nav{
+            margin-left: 35px;
+            width: 80%;
+            @include d-flex(row,nowrap, space-between, center);
+        }
+        &__ul{
+            @include d-flex(row,nowrap, space-evenly,center);
+        }
+        &__li{
+            padding: 1.4em 1em;
+        }
+        &__hov{
+            transition:all .5s ease;
+        }
+        &__hov:hover{
+            opacity:.7;
+        }
+        &__restante{
+            width: 100%;
+            background-color: rgba(0,8,213);
+            padding: 3px;
+        }
+        &__centrotexto{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            font-style: none;
+        }
     
+    }
+    .fondo{
+            color: white;
+            width: 100%;
+            position: relative;
+        
+        &__video{
+            z-index: -1;
+            object-fit: cover;
+            overflow: hidden;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        &__caja{
+            position: absolute;
+            width: 100%;
+            top: 24%;
+            left:0;
+        }
+        &__centrado{
+            width: 44%;
+            max-width: 615px;
+            margin: auto;
+            text-align: center;
+        }
+        &__live{
+            padding: .6em 0;
+            font-size: 3.5em;
+        }
+        &__teatro{
+            font-weight: 900;
+            font-size: 1.8em;
+        }
+        &__boton{
+            width: 50%;
+            margin: auto;
+            font-size: 17px;
+            margin-top: 1.5em;
+            padding: 18px 40px;
+            cursor: pointer;
+            color: white;
+            background-color: var(--color-accent);
+            transition: color 0.6s ease-out 0s;
+            overflow: hidden;
+        }
+        &__boton:hover{
+            
+            background-color: white;
+        }
+        &__enlace{
+            width: 100%;
+            height: 100%;          
+            position: relative;
+        }
+        &__span{
+            width: 100%;
+            height: 100%;
+            @include d-flex(row,nowrap,center,center);
+            opacity: 1;
+            transform: translateY(0%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
+            
+        }
+        &__sphover{
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--color-accent);
+            opacity: 0;
+            transform: translateY(50%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+        }
+        &__boton:hover .fondo__span{
+            color: var(--color-accent);
+            transform: translateY(-75%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+            opacity: 0;
+        }
+        &__boton:hover .fondo__sphover{
+            opacity: 1;
+            color: var(--color-accent);
+            transform: translateY(0%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
+        }
+        &__fecha{
+            margin-top: 12.5em;
+            width: 100%;
+            height: 7.5em;
+            border: 1px solid white;
+        }
+        &__cajaflex{
+            font-style: normal;
+            margin: 1em auto;
+            width: 90%;
+            @include d-flex(row,nowrap, space-between, center);
+        }
+        &__boton2{
+            width: 90%;
+            margin: auto;
+            font-size: 17px;
+            margin-top: 1.5em;
+            padding: 10px 40px;
+            cursor: pointer;
+            color: white;
+            background-color: var(--color-principal);
+            transition: color 0.6s ease-out 0s;
+            overflow: hidden;
+        }
+        &__boton2:hover{
+            
+            background-color: white;
+        }
+        &__enlace2{
+            width: 100%;
+            height: 100%;          
+            position: relative;
+        }
+        &__span2{
+            width: 100%;
+            height: 100%;
+            //position: absolute;
+            // left: 0;
+            // top: 0;
+            @include d-flex(row,nowrap,center,center);
+            opacity: 1;
+            transform: translateY(0%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
+            
+        }
+        &__sphover2{
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--color-principal);
+            opacity: 0;
+            transform: translateY(50%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+        }
+        &__boton2:hover .fondo__span2{
+            color: var(--color-principal);
+            transform: translateY(-75%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+            opacity: 0;
+        }
+        &__boton2:hover .fondo__sphover2{
+            opacity: 1;
+            color: var(--color-principal);
+            transform: translateY(0%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
+        }
+    }
+        .cajanegra{
+            width: 100%;
+            color: white;
+            background-color: black;
+            font-style: normal;
+            line-height: 1;
+            &__centrado{
+                width: 90%;
+                max-width: 1150px;
+                object-fit: cover;
+                margin: auto;
+                padding: 8.75em 0;
+                @include d-flex (row, nowrap, space-between, center);
+            }
+            &__video{
+                max-height: 550px;
+                width: 48%;   
+            }
+            &__textos{
+                width: 48%;
+            }
+            &__h2{
+                font-weight: 300;
+                font-size: 5em;
+                padding-bottom: .3em;
+                
+            }
+            &__h3{
+                width: 80%;
+                font-size:4em;
+            }
+            &__p{
+                padding: 3em 0; 
+                text-transform: initial;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            &__boton{
+                width: 65%;
+                font-size: 17px;
+                margin-top: 1.5em;
+                padding: 18px 40px;
+                cursor: pointer;
+                color: white;
+                background-color: var(--color-principal);
+                transition: color 0.6s ease-out 0s;
+                overflow: hidden;
+            }
+            &__boton:hover{
+                
+                background-color: white;
+            }
+            &__enlace{
+                width: 100%;
+                height: 100%;          
+                position: relative;
+            }
+            &__span{
+                width: 100%;
+                height: 100%;
+                //position: absolute;
+                // left: 0;
+                // top: 0;
+                @include d-flex(row,nowrap,center,center);
+                opacity: 1;
+                transform: translateY(0%);
+                transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
+                
+            }
+            &__sphover{
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: var(--color-principal);
+                opacity: 0;
+                transform: translateY(50%);
+                transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+            }
+            &__boton:hover .cajanegra__span{
+                color: var(--color-principal);
+                transform: translateY(-75%);
+                transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+                opacity: 0;
+            }
+            &__boton:hover .cajanegra__sphover{
+                opacity: 1;
+                color: var(--color-principal);
+                transform: translateY(0%);
+                transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .050s, opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) .010s;
+            }
+        }
+        .news{
+            padding: 8.75em 0;
+            color:white;
+            width: 100%;
+            background-color: var(--fondo-secundario);
+            &__titulos{
+                width: 90%;
+                max-width: 1750px;
+                margin: auto;
+                @include d-flex (row, nowrap, space-between, center);
+            }
+            &__h2{
+                font-size: 48px;
+                padding-bottom: 1em;
+            }
+            &__centrado{
+                width: 90%;
+                margin: auto;
+                max-height: 320px;
+                overflow: hidden;
+            }
+            &__sobresaliente{
+                width: 117%;
+                @include d-flex(row, nowrap, space-between, flex-start);
+            }
+            &__item{
+                width: 15%;
+                margin-right: 3.25em;
+            }
+            &__img{
+                padding: 2em 0;
+                filter: grayscale(100%);
+                transition: all .5s ease; 
+            }
+            &__fecha{
+                font-size: 13px;
+                color: rgba(111,111,111);
+            }
+            &__p{
+                padding-top: 1em;
+                font-size: 18px;
+                transition: all .5s ease; 
+            }
+            &__item:hover .news__img{
+                filter: grayscale(0%);
+            }
+            &__item:hover .news__p{
+                color: rgba(111,111,111);
+            }
+        }
+        .formulario{
+            min-height: 50vh;
+            background-image: url(../assets/home/img/fondo.jpg);
+            background-size: cover;
+            &__centrado{
+                width: 30%;
+                margin: auto;
+                padding-top: 5em;
+                @include d-flex(row, nowrap, center, center);
+            }
+            &__h4{
+                font-size: 40px;
+                line-height: 1;
+                color: var(--color-principal);
+            }
+            &__h3{
+                font-size: 70px;
+                line-height: 1;
+                color: var(--color-principal);
+            }
+            &__blanco{
+                color: white;
+            }
+            &__form{
+                color: white;
+            }
+            &__nombre{
+                background-color: rgba(44,44,44);
+                padding: 1.25em;
+                border-radius: .25em;
+                margin: 2em;
+                color: white;
+            }
+            &__nombre::placeholder{
+                color:white;
+            }
+            &__nombre:focus::placeholder{
+                color:gray;
+            }
+            &__label{
+                position: relative;
+            }
+        }
 }
