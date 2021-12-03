@@ -89,7 +89,7 @@
         &__boton{
             width: 50%;
             margin: auto;
-            font-size: 17px;
+            font-size: 1.06em;
             margin-top: 1.5em;
             padding: 18px 40px;
             cursor: pointer;
@@ -152,7 +152,7 @@
         &__boton2{
             width: 90%;
             margin: auto;
-            font-size: 17px;
+            font-size: 1.06em;
             margin-top: 1.5em;
             padding: 10px 40px;
             cursor: pointer;
@@ -343,12 +343,38 @@
                 color: rgba(111,111,111);
             }
         }
+        .explore{
+            width: 100%;
+            padding: 8.25em 0;
+            background-color: var(--fondo-secundario);
+            min-height: 70vh;
+            text-align: center;
+            color: white;
+            font-size: 48px;
+            &__centrado{
+                padding: 4em 0 0 0;
+                width: 70%;
+                margin: auto;
+                @include d-flex(row, nowrap, space-between, center);
+                object-fit: cover;
+            }
+            &__img{
+                width: 45%;
+                filter: grayscale(100%);
+                transition: all .5s ease;
+            }
+            &__img:hover{
+                filter: grayscale(0%);
+            }
+
+        }
         .formulario{
             min-height: 70vh;
             background-image: url(../assets/home/img/fondo.jpg);
             background-size: cover;
             &__centrado{
-                width: 30%;
+                width: 80%;
+                max-width: 675px;
                 margin: auto;
                 padding-top: 5em;
                 @include d-flex(row, nowrap, center, center);
@@ -390,14 +416,16 @@
                 display: block;
                 position: relative;
                 margin-left: 45px;
+                padding-bottom: 2em;
             }
+            &__aceptar{
+                padding-left: 45px;}
             &__check{
                 position: absolute;
                 opacity: 0;
                 cursor: pointer;
             }
-            &__aceptar{
-                padding-left: 45px;}
+            
             &__cuadrado{
                 position: absolute;
                 display: block;
@@ -418,8 +446,84 @@
                 border: 7px solid black;
                 display: none;
             }
-            &__check:checked .formulario__cuadrado::after{
+            &__check:checked + .formulario__cuadrado::after{
                 display: block;
             }
+            &__submit{
+                margin: auto;
+                cursor: pointer;
+                padding: 12px 30px;
+                text-align: center;
+                width: 100%;
+                border: 1px solid white;
+                max-width: 270px;
+            }
+        }
+        @media  screen and (max-width: 1700px) {
+            .fondo__caja{
+                position: static;
+                background-color: var(--fondo-secundario);
+                padding: 2em 0;
+                line-height: 1;
+            }
+            .fondo__centrado{
+                width: 80%;
+            }
+            
+        }
+        @media  screen and (max-width: 1350px) {
+            .cajanegra__centrado{
+                display: block;
+                width: 80%;
+            }
+            .cajanegra__video{
+                width: 100%;
+            }
+            .cajanegra__textos{
+                padding-top: 2em;
+                width: 100%;
+                text-align: center;
+                font-size: .6em;
+            }
+            .cajanegra__h3{width: 100%;}
+            .cajanegra__boton{
+                margin: auto;
+            }
+            .news__sobresaliente{
+                display: block;
+                width: 80%;
+                margin: auto;
+            }
+            .news__centrado{
+                max-height: none;
+            }
+            .news__item{
+                width: 100%;
+                margin: auto;
+            }
+            .news__img{
+                filter: grayscale(0%);
+            }
+            .formulario__centrado{
+                display: block;
+                text-align: center;
+            }
+            .explore__centrado{
+                display: block;
+                width: 80%;
+            }
+            .explore__img{
+                width: 100%;
+                filter: grayscale(0%);
+            }
+            .explore__padding{
+                padding-bottom: 3em;
+            }
+        }
+        @media  screen and (max-width: 700px) {
+            .fondo__caja{
+               font-size: .6em;
+            }
+            
         }
 }

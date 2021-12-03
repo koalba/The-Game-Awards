@@ -246,7 +246,7 @@ body {
 .home .fondo__boton {
   width: 50%;
   margin: auto;
-  font-size: 17px;
+  font-size: 1.06em;
   margin-top: 1.5em;
   padding: 18px 40px;
   cursor: pointer;
@@ -348,7 +348,7 @@ body {
 .home .fondo__boton2 {
   width: 90%;
   margin: auto;
-  font-size: 17px;
+  font-size: 1.06em;
   margin-top: 1.5em;
   padding: 10px 40px;
   cursor: pointer;
@@ -626,13 +626,54 @@ body {
 .home .news__item:hover .news__p {
   color: #6f6f6f;
 }
+.home .explore {
+  width: 100%;
+  padding: 8.25em 0;
+  background-color: var(--fondo-secundario);
+  min-height: 70vh;
+  text-align: center;
+  color: white;
+  font-size: 48px;
+}
+.home .explore__centrado {
+  padding: 4em 0 0 0;
+  width: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home .explore__img {
+  width: 45%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.home .explore__img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
 .home .formulario {
   min-height: 70vh;
   background-image: url(../assets/home/img/fondo.jpg);
   background-size: cover;
 }
 .home .formulario__centrado {
-  width: 30%;
+  width: 80%;
+  max-width: 675px;
   margin: auto;
   padding-top: 5em;
   display: -webkit-box;
@@ -710,14 +751,15 @@ body {
   display: block;
   position: relative;
   margin-left: 45px;
+  padding-bottom: 2em;
+}
+.home .formulario__aceptar {
+  padding-left: 45px;
 }
 .home .formulario__check {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-}
-.home .formulario__aceptar {
-  padding-left: 45px;
 }
 .home .formulario__cuadrado {
   position: absolute;
@@ -738,8 +780,86 @@ body {
   border: 7px solid black;
   display: none;
 }
-.home .formulario__check:checked .formulario__cuadrado::after {
+.home .formulario__check:checked + .formulario__cuadrado::after {
   display: block;
+}
+.home .formulario__submit {
+  margin: auto;
+  cursor: pointer;
+  padding: 12px 30px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid white;
+  max-width: 270px;
+}
+@media screen and (max-width: 1700px) {
+  .home .fondo__caja {
+    position: static;
+    background-color: var(--fondo-secundario);
+    padding: 2em 0;
+    line-height: 1;
+  }
+  .home .fondo__centrado {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .home .cajanegra__centrado {
+    display: block;
+    width: 80%;
+  }
+  .home .cajanegra__video {
+    width: 100%;
+  }
+  .home .cajanegra__textos {
+    padding-top: 2em;
+    width: 100%;
+    text-align: center;
+    font-size: 0.6em;
+  }
+  .home .cajanegra__h3 {
+    width: 100%;
+  }
+  .home .cajanegra__boton {
+    margin: auto;
+  }
+  .home .news__sobresaliente {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .home .news__centrado {
+    max-height: none;
+  }
+  .home .news__item {
+    width: 100%;
+    margin: auto;
+  }
+  .home .news__img {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+  .home .formulario__centrado {
+    display: block;
+    text-align: center;
+  }
+  .home .explore__centrado {
+    display: block;
+    width: 80%;
+  }
+  .home .explore__img {
+    width: 100%;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+  .home .explore__padding {
+    padding-bottom: 3em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .home .fondo__caja {
+    font-size: 0.6em;
+  }
 }
 
 /* Home de Pablo */
