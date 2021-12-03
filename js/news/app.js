@@ -92,9 +92,33 @@ $(document).ready( function(){
     })
 
 
-    $('.selector__fechas--titulo').click(function(){
+    $('.selector__all').click(function(){
         $('.selector__li').toggleClass('activo')
+        $('.grid__celda').css('display','block')
+        $('.selector__li').removeClass('select').removeClass('unselected')
+        $('.selector__svg').toggleClass('activo')
     })
+    // $('.selector__li').click(function(){
+    //     let dejar = $('.selector__li').index($(this))
+    //     $('.selector__li').removeClass('activo')
+    //     $('.selector__li').eq(dejar).addClass('activo')
+    // })
+
+
+    $('.selector__fechas').click(function(){
+        let anio = $(this).html()
+        $('.grid__celda').css('display','none')
+        $(`.grid__celda[data-year="${ anio }"]`).css('display','block')
+    })
+    $('.selector__li').click(function(){
+        let selected = $('.selector__li').index($(this))
+        $('.selector__li').toggleClass('select').toggleClass('unselected')
+        $('.selector__li').eq(selected).toggleClass('select').toggleClass('unselected')
+        $('.selector__all').toggleClass('unselected')
+        $('.selector__svg').toggleClass('activo')
+
+    })
+
 
 
 

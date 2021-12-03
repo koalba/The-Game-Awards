@@ -314,6 +314,9 @@ body {
   text-transform: uppercase;
   margin-top: 0.5em;
 }
+.main__selector {
+  cursor: pointer;
+}
 .selector {
   color: var(--color-texto);
   font-family: var(--f-principal);
@@ -321,6 +324,7 @@ body {
   font-size: 200%;
   font-style: italic;
   text-transform: uppercase;
+  position: relative;
 }
 .selector__span {
   font-size: 0.9rem;
@@ -329,22 +333,6 @@ body {
 .selector__ul {
   border: 1px var(--color-texto) solid;
   padding: 0.4em;
-}
-.selector__all {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 125px;
 }
 .selector__fechas {
   height: 100%;
@@ -369,17 +357,62 @@ body {
   width: 0.8em;
   height: 0.8em;
   margin: 0 0.1em;
+  position: absolute;
+  right: 0.8em;
+  top: 1.8em;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+.selector__svg.activo {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .selector__li {
   height: 0px;
   -webkit-transform-origin: top;
           transform-origin: top;
   overflow: hidden;
-  -webkit-transition: height 0.5s linear;
-  transition: height 0.5s linear;
+  -webkit-transition: height 0.5s linear, color 0.2s ease;
+  transition: height 0.5s linear, color 0.2s ease;
+  color: var(--color-subtexto);
+}
+.selector__li:hover {
+  color: var(--color-subtexto);
 }
 .selector__li.activo {
   height: 50px;
+  color: var(--color-texto);
+}
+.selector__li.select {
+  color: var(--color-texto);
+}
+.selector__li.unselected {
+  height: 0;
+}
+.selector__all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 125px;
+  height: 50px;
+  overflow: hidden;
+  -webkit-transition: height 0.5s linear, color 0.2s ease;
+  transition: height 0.5s linear, color 0.2s ease;
+}
+.selector__all.unselected {
+  height: 0;
 }
 
 .grid__celdas {
@@ -419,6 +452,12 @@ body {
           filter: grayscale(100%);
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
+}
+@media (max-width: 768px) {
+  .grid__img {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
 }
 .grid__texto {
   display: -webkit-box;
@@ -575,13 +614,51 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25%;
+  width: 16em;
   margin: 3em 0;
 }
 .signin__social--caja {
   width: 3em;
   height: 3em;
   background-color: var(--color-principal);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.signin__social--svg {
+  height: 1.5em;
+  width: 1.5em;
+}
+.signin__caja {
+  width: 1.5em;
+  height: 1.5em;
+  background: var(--color-principal);
+  display: block;
+  margin-right: 0.5em;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .signin__priv {
   margin: 2em 0;
@@ -631,6 +708,34 @@ body {
 }
 .signin__a:hover {
   text-decoration: none;
+}
+.signin__tick {
+  width: 1.5em;
+  height: 1.5em;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+#check:checked + .signin__caja .signin__tick {
+  display: block;
+}
+
+#label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Home de Alba */
