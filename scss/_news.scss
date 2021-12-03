@@ -160,6 +160,11 @@
             grid-template-columns: repeat(2, 1fr);
             
         }
+        @media screen and (max-width:769px){
+            grid-template-columns: 1fr;
+            
+        }
+        
     }
     &__celda {
         // background: red;
@@ -239,5 +244,126 @@
 }
 .copy {
     &__span {
+    }
+}
+
+.signin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    font-family: var(--f-principal);
+    font-weight: 900;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+    }
+    &__close {
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        color: var(--c-color-texto);
+        @include d-flex(row, nowrap, center, center);
+        cursor: pointer;
+        transition: .3s ease all;
+        text-transform: uppercase;
+        &:hover{
+            .signin__span{
+                color: var(--color-subtexto);
+            }
+            .signin__svg{
+                fill: var(--color-subtexto);
+            }
+        }
+    }
+    &__span {
+        color: var(--color-texto);
+        margin-right: .5em;
+        letter-spacing: -1px;
+        font-size: 100%;
+        transition: .3s ease all;
+
+    }
+    &__svg {
+        color: var(--color-texto);
+        fill: var(--color-texto);
+        width: 2em;
+        height: 2em;
+        border: 1px var(--color-texto) solid;
+        display: block;
+        transition: .3s ease all;
+
+    }
+    &__main {
+        width: 50%;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        color: var(--color-texto);
+        @include d-flex(column, nowrap, center, center);
+        text-transform: uppercase;
+    }
+    &__titulo {
+        font-size: 500%;
+        line-height: 1em;
+        font-style: italic;
+        letter-spacing: -.05em;
+    }
+    &__subtitulo {
+        font-style: italic;
+        font-size: 150%;
+        margin: 1em 0;
+    }
+    &__texto {
+        max-width: 24em;
+        width: 100%;
+        // background: red;
+        text-align: center;
+    }
+    &__social {
+        @include d-flex(row, nowrap, space-between, center);
+        width: 25%;
+        margin: 3em 0;
+        &--caja {
+            width: 3em;
+            height: 3em;
+            background-color: var(--color-principal);
+        }
+        &--svg {
+        }
+    }
+    &__form {
+    }
+    &__priv {
+        margin: 2em 0;
+        @include d-flex(column, nowrap, center, center);
+    }
+    &__seriously {
+        color: var(--color-subtexto);
+        font-style: italic;
+        font-size: 120%;
+    }
+    &__barra {
+        width: 100%;
+        height: 2px;
+        background: var(--color-subtexto);
+        margin: 1em 0;
+    }
+    &__links {
+        @include d-flex(row, nowrap, center, center);
+        
+    }
+    &__a {
+        margin: 0 1em;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
     }
 }

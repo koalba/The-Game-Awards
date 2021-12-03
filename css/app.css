@@ -396,6 +396,12 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media screen and (max-width: 769px) {
+  .grid__celdas {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 .grid__celda {
   opacity: 0;
   -webkit-transition: opacity 0.5s linear;
@@ -443,6 +449,180 @@ body {
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
+}
+
+.signin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  font-family: var(--f-principal);
+  font-weight: 900;
+}
+.signin__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.signin__close {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  color: var(--c-color-texto);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  text-transform: uppercase;
+}
+.signin__close:hover .signin__span {
+  color: var(--color-subtexto);
+}
+.signin__close:hover .signin__svg {
+  fill: var(--color-subtexto);
+}
+.signin__span {
+  color: var(--color-texto);
+  margin-right: 0.5em;
+  letter-spacing: -1px;
+  font-size: 100%;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+.signin__svg {
+  color: var(--color-texto);
+  fill: var(--color-texto);
+  width: 2em;
+  height: 2em;
+  border: 1px var(--color-texto) solid;
+  display: block;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+.signin__main {
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  color: var(--color-texto);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+.signin__titulo {
+  font-size: 500%;
+  line-height: 1em;
+  font-style: italic;
+  letter-spacing: -0.05em;
+}
+.signin__subtitulo {
+  font-style: italic;
+  font-size: 150%;
+  margin: 1em 0;
+}
+.signin__texto {
+  max-width: 24em;
+  width: 100%;
+  text-align: center;
+}
+.signin__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  margin: 3em 0;
+}
+.signin__social--caja {
+  width: 3em;
+  height: 3em;
+  background-color: var(--color-principal);
+}
+.signin__priv {
+  margin: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.signin__seriously {
+  color: var(--color-subtexto);
+  font-style: italic;
+  font-size: 120%;
+}
+.signin__barra {
+  width: 100%;
+  height: 2px;
+  background: var(--color-subtexto);
+  margin: 1em 0;
+}
+.signin__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.signin__a {
+  margin: 0 1em;
+  text-decoration: underline;
+}
+.signin__a:hover {
+  text-decoration: none;
 }
 
 /* Home de Alba */
