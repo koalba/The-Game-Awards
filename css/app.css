@@ -460,6 +460,14 @@ body {
   z-index: 5;
   font-family: var(--f-principal);
   font-weight: 900;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.signin.oculto {
+  opacity: 0;
+  pointer-events: none;
 }
 .signin__bg {
   position: absolute;

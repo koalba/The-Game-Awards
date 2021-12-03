@@ -129,5 +129,12 @@ $(document).ready( function(){
     
 })
     
+$('.header__a--signin').click(function(){
+    $('.signin').removeClass('oculto')
+})
+$('.signin__close').click(function(){
+    $('.signin').addClass('oculto')
+})
+
 
 
