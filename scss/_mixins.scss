@@ -1,52 +1,76 @@
 // Pablowako
 
 // Este sirve para centrar contenido y darle un max-width
-@mixin wrap ($width, $maxwidth, $center-vert){
-	width: 		$width;
-	max-width: 	$maxwidth;
-	margin: 	auto;
-	@include flex (row, nowrap, $center-vert, center);
+@mixin wrap($width, $maxwidth, $center-vert) {
+  width: $width;
+  max-width: $maxwidth;
+  margin: auto;
+  @include flex(row, nowrap, $center-vert, center);
 }
 
 // Este sirve para centrar contenido
-@mixin flex-center(){
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
+@mixin flex-center() {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin grid ( $repetirC , $grosorC , $gap , $repetirR : initial, $grosorR : initial ){
-	display					: grid;
-	grid-template-columns	: repeat( $repetirC , $grosorC );
-	@if $repetirR != 'initial' {
-		grid-template-rows	: repeat( $repetirR , $grosorR );
-	}
-	gap: $gap ;
+@mixin grid($repetirC, $grosorC, $gap, $repetirR: initial, $grosorR: initial) {
+  display: grid;
+  grid-template-columns: repeat($repetirC, $grosorC);
+  @if $repetirR != "initial" {
+    grid-template-rows: repeat($repetirR, $grosorR);
+  }
+  gap: $gap;
 }
 
 @mixin d-flex($direction, $wrap, $justify, $align) {
-    display: flex;
-    flex-flow: $direction $wrap;
-    justify-content: $justify;
-    @if $wrap == "nowrap" {
-      align-items: $align;
-    } @else {
-      align-content: $align;
-      align-items: $align;
-    }
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  @if $wrap == "nowrap" {
+    align-items: $align;
+  } @else {
+    align-content: $align;
+    align-items: $align;
+  }
 }
-  
+
 @mixin position($type, $y, $ynum, $x, $xnum) {
-	position: $type;
-	@if $y == "top" {
-		top: $ynum;
-	} @else {
-		bottom: $ynum;
-	}
-	@if $x == "left" {
-		left: $xnum;
-	} @else {
-		right: $xnum;
-	}
+  position: $type;
+  @if $y == "top" {
+    top: $ynum;
+  } @else {
+    bottom: $ynum;
+  }
+  @if $x == "left" {
+    left: $xnum;
+  } @else {
+    right: $xnum;
+  }
+}
+
+// Mixin para media query
+//   m = mobile
+//   t = tablet
+//   otro num (sin px) = lo que quieras
+
+@mixin media($d) {
+  $mobile: 767px;
+  $tablet: 1065px;
+
+  @if ($d == "m") {
+    @media screen and (max-width: #{$mobile}) {
+      @content;
+    }
+  } @else if($d == "t") {
+    @media screen and (max-width: #{$tablet}) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: #{$d + "px"}) {
+      @content;
+    }
+  }
 }

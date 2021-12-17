@@ -10,7 +10,10 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
-img , picture , video , iframe{
+img,
+picture,
+video,
+iframe {
   max-width: 100%;
   width: 100%;
   display: block;
@@ -20,8 +23,8 @@ img , picture , video , iframe{
 a {
   display: block;
   text-decoration: none;
-  color:inherit;
-  font-size:inherit;
+  color: inherit;
+  font-size: inherit;
 }
 p a {
   display: inline;
@@ -29,48 +32,70 @@ p a {
 li {
   list-style-type: none;
 }
-table , tr , td {
+table,
+tr,
+td {
   border-collapse: collapse;
   border-spacing: 0;
 }
 html {
   scroll-behavior: smooth;
 }
-h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
   font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 ::selection {
   background-color: var(--negro);
   color: var(--blanco);
 }
 
-form , input, textarea, select , button{
-    font-family: inherit;
-    font-size: inherit;
-    hyphens: auto;
-    background-color: transparent;
-    // appearance: none;
-    display: block;
+form,
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  // appearance: none;
+  display: block;
 }
 
-table , td , tr{
-    border-collapse: collapse;
-    border-spacing: 0;
+table,
+td,
+tr {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-svg{
-    fill: currentColor;
+svg {
+  fill: currentColor;
 }
 body {
-  font-family: var(--tipo-principal);
+  font-family: var(--f-principal);
   font-size: 100%;
-  line-height: 1.4em;
+  line-height: normal;
   min-height: 100vh;
-  background-color: var(--blanco);
-  color:var(--negro);
+  background-color: var(--fondo-principal);
+  color: var(--color-texto);
   hyphens: auto;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
