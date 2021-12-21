@@ -1,18 +1,19 @@
 $(document).ready( function(){
-    const top = $('.hero__ul').offset().top
-    const menuH = $('.header').outerHeight()
-    const secmenuH = $('.hero__ul').outerHeight()
+    
+    const top       = $('.hero__ul').offset().top
+    const menuH     = $('.header').outerHeight()
+    const secmenuH  = $('.hero__ul').outerHeight()
 
     $(window).scroll(function(){
     
-        let pixel = $(window).scrollTop()
-        let mediaT = $("#media").offset().top
-        let hostT = $("#host").offset().top
-        let boardT = $("#board").offset().top
-        let pressT = $("#press").offset().top
-        let contactT = $("#contact").offset().top
+        let pixel       = $(window).scrollTop()
+        let mediaT      = $("#media").offset().top
+        let hostT       = $("#host").offset().top
+        let boardT      = $("#board").offset().top
+        let pressT      = $("#press").offset().top
+        let contactT    = $("#contact").offset().top
 
-        let finPixel = pixel + menuH + secmenuH;
+        let finPixel    = pixel + menuH + secmenuH;
 
         if(pixel + menuH >= top){
             $('.hero__ul').addClass('active')
@@ -56,23 +57,15 @@ $(document).ready( function(){
     let foto = 0 
     
     $('.media__dots .dots__dot').click(function(){
-
         foto = $('.dots__dot').index( $(this) )
-
         $('.media__ul').css('transform',`translateX(-${ foto * 33.33 }%)`)
-
-        $('.media__dots .dots__dot').removeClass('active')
-        $('.media__dots .dots__dot').eq( foto ).addClass('active')
+        $('.media__dots .dots__dot').removeClass('active').eq( foto ).addClass('active')
     })
 
     $('.press__dots .dots__dot').click(function(){
-
         foto = $('.press__dots .dots__dot').index( $(this) )
-
         $('.press__ul').css('transform',`translateX(-${ foto * 16.66 }%)`)
-
-        $('.press__dots .dots__dot').removeClass('active')
-        $('.press__dots .dots__dot').eq( foto ).addClass('active')
+        $('.press__dots .dots__dot').removeClass('active').eq( foto ).addClass('active')
     })
 
     let rrss = 0

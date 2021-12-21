@@ -1,39 +1,14 @@
 'use strict'
 
-
-// Cuando CLICK en .slider__li
-    // foto = POSICION
-    // .slider__grande TRANSFORM: TRANSLATE
-    // TODOS los .slider__li REMOVE 'activo'
-    // .slider__li FOTO ADD 'activo'
-
-
-// Cuando hago CLICK en .der
-    // foto AUMENTA
-    // .slider__grande TRANSFORM: TRANSLATE
-    // TODOS los .slider__li REMOVE 'activo'
-    // .slider__li FOTO ADD 'activo'
-
-// Cuando hago CLICK en .izq
-        // foto DISMINUYE
-    // .slider__grande TRANSFORM: TRANSLATE
-    // TODOS los .slider__li REMOVE 'activo'
-    // .slider__li FOTO ADD 'activo'
-
-
 $(document).ready( function(){
-
 
     let foto = 0 
     
     $('.slider__li').click(function(){
 
         foto = $('.slider__li').index( $(this) )
-
         $('.slider__grande').css('transform',`translateX(-${ foto * 33.33 }%)`)
-
-        $('.slider__li').removeClass('activo')
-        $('.slider__li').eq( foto ).addClass('activo')
+        $('.slider__li').removeClass('activo').eq( foto ).addClass('activo')
 
         if( foto > 1 ){
             $('.der').removeClass('activo')
@@ -53,8 +28,7 @@ $(document).ready( function(){
         foto++
 
         $('.slider__grande').css('transform',`translateX(-${ foto * 33.33 }%)`)
-        $('.slider__li').removeClass('activo')
-        $('.slider__li').eq( foto ).addClass('activo')
+        $('.slider__li').removeClass('activo').eq( foto ).addClass('activo')
 
         if( foto > 1 ){
             $('.der').removeClass('activo')
@@ -74,8 +48,7 @@ $(document).ready( function(){
         foto--
 
         $('.slider__grande').css('transform',`translateX(-${ foto * 33.33 }%)`)
-        $('.slider__li').removeClass('activo')
-        $('.slider__li').eq( foto ).addClass('activo')
+        $('.slider__li').removeClass('activo').eq( foto ).addClass('activo')
 
         if( foto > 1 ){
             $('.der').removeClass('activo')
@@ -98,18 +71,13 @@ $(document).ready( function(){
         $('.selector__li').removeClass('select').removeClass('unselected')
         $('.selector__svg').toggleClass('activo')
     })
-    // $('.selector__li').click(function(){
-    //     let dejar = $('.selector__li').index($(this))
-    //     $('.selector__li').removeClass('activo')
-    //     $('.selector__li').eq(dejar).addClass('activo')
-    // })
-
-
+    
     $('.selector__fechas').click(function(){
         let anio = $(this).html()
         $('.grid__celda').css('display','none')
         $(`.grid__celda[data-year="${ anio }"]`).css('display','block')
     })
+    
     $('.selector__li').click(function(){
         let selected = $('.selector__li').index($(this))
         $('.selector__li').toggleClass('select').toggleClass('unselected')
