@@ -5,7 +5,7 @@ Teamwork de la web (The Game Awards 2021)[https://thegameawards.com/] como ejerc
 En este proyecto ha sido creado con:
 * HTML5
 * SASS
-* JS (jQUery + Vanilla JS)
+* JS (jQuery + Vanilla JS)
 * Metodología BEM
 
 ## Developers ✒️
