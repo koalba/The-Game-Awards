@@ -17,7 +17,7 @@ En este proyecto ha sido creado con:
 * [https://github.com/pablowako](https://github.com/pablowako)
 
 
-**Sergiomo GM** - *Documentación y trabajo inicial*
+**Sergiomo GM** - *Desarrollo de la sección Home*
 * [https://sergiomogm.com/](https://sergiomogm.com/)
 
 
