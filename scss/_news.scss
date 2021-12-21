@@ -1,7 +1,6 @@
 .news{
-    
-}
 
+    
 .header {
     @include d-flex(row, nowrap, flex-start, center);
     background: var(--color-principal);
@@ -427,5 +426,7 @@
 }
 #label{
     @include d-flex(row, nowrap, center, center)
+
+}
 
 }
