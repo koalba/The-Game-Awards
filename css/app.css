@@ -14,13 +14,6 @@
   --f-secundaria: Helvetica, Arial, sans-serif;
 }
 
-/* Las adaptamos al modo oscuro */
-/* @media (prefers-color-scheme: dark) {
-    :root{
-        --negro         : #ececec;
-
-    }
-}*/
 /*
     Estilos generales para que las etiquetas no contengan propiedades
     que nos estorben y en todos los navegadores se vean correctamente
