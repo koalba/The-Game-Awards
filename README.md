@@ -11,15 +11,15 @@ En este proyecto ha sido creado con:
 ## Developers ✒️
 **Alba García** - *Desarrollo de la sección About*
 * [https://github.com/koalba/](https://github.com/koalba/)
-* [https://koalba/.com](https://koalba/.com)
+* [https://koalba.com](https://koalba.com)
 
 **Pablo Wako** - *Desarrollo de la sección News*
 * [https://github.com/pablowako](https://github.com/pablowako)
 
-<!-- 
+
 **Sergiomo GM** - *Documentación y trabajo inicial*
-* [https://github.com/sergiomogm](https://github.com/sergiomogm)
--->
+* [https://sergiomogm.com/](https://sergiomogm.com/)
+
 
 **Eduardo Fierro** - *Revisión del proyecto*
 * [Github](https://github.com/eduardofierropro)
