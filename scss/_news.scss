@@ -1,3 +1,431 @@
 .news{
     
 }
+
+.header {
+    @include d-flex(row, nowrap, flex-start, center);
+    background: var(--color-principal);
+    min-height: 90px;
+    font-family: var(--f-principal);
+    font-weight: 900;
+    font-style: italic;
+    padding: 0 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    &__wrap {
+        color: var(--color-texto);
+        text-transform: uppercase;
+        @include wrap(100%, 1800px, center);
+    }
+    &__left {
+        @include d-flex(row, nowrap, flex-start, center);
+        width: 70%;
+    }
+    &__h1 {
+        margin-left: -20px;
+    }
+    &__logo{
+        width: 2em;
+        height: 2em;
+    }
+    &__img {
+    }
+    &__nav {
+        margin-left: 35px;
+    }
+    &__ul {
+        @include d-flex(row, nowrap, flex-start, center);
+    }
+    &__li {
+        padding: 1.4em;
+    }
+    &__a {
+        &--signin{
+            @include d-flex(row, nowrap, flex-end, center);
+        }
+    }
+    &__right {
+        @include d-flex(row, nowrap, flex-end, center);
+        width: 30%;
+    }
+    &__span {
+    }
+    &__svg {
+        width: 1em;
+        height: 1em;
+    }
+    &__signin{
+        width: 2em;
+        height: 2em;
+        margin: 0 1em;
+    }
+}
+.main {
+    min-height: 100em;
+    &__bg{
+        background-image: url('../assets/news/img/TGA21_Superhero_Ambient_002_1.jpg');
+        background-position: top;
+        background-size: contain;
+        min-height: 100em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+
+    }
+    &__wrap {
+        @include wrap(100%, 1800px, center);
+        flex-direction: column;
+        width: 100%;
+        padding: 12em 30px;
+    }
+    &__header {
+        @include d-flex (row, nowrap, space-between, flex-start);
+        width: 100%;
+        margin-bottom: 5em;
+    }
+    &__news {
+        color: var(--color-texto);
+        font-family: var(--f-principal);
+        font-weight: 900;
+        font-size: 400%;
+        font-style: italic;
+        text-transform: uppercase;
+        margin-top: .5em;
+    }
+    &__selector {
+        cursor: pointer;
+    }
+    &__grid {
+    }
+}
+.selector {
+        color: var(--color-texto);
+        font-family: var(--f-principal);
+        font-weight: 900;
+        font-size: 200%;
+        font-style: italic;
+        text-transform: uppercase;
+        position: relative;
+    &__span {
+        font-size: .9rem;
+        line-height: 2.4em;
+    }
+    &__ul {
+        border: 1px var(--color-texto) solid;
+        padding: .4em;
+    }
+    &__fechas {
+        height: 100%;
+        @include d-flex(row, nowrap, flex-start, center);
+        
+        &--titulo{
+            font-style: normal;
+        }
+    }
+    &__svg {
+        width: .8em;
+        height: .8em;
+        margin: 0 .1em;
+        position: absolute;
+        right: .8em;
+        top: 1.8em;
+        // border: transparent 8px solid;
+        // border-bottom: 8px var(--color-texto) solid;
+        transform: rotate(0deg);
+        transition: .3s ease all;
+        &.activo{
+            transform: rotate(180deg);
+        }
+    }
+    &__li {
+        height: 0px;
+        transform-origin: top;
+        overflow:hidden;
+        transition: height .5s linear, color .2s ease;
+        color: var(--color-subtexto);
+        &:hover{
+            color: var(--color-subtexto);
+        }
+        &.activo{
+            height: 50px;
+            color: var(--color-texto);
+
+        }
+        &.select{
+            color: var(--color-texto)
+        }
+        &.unselected{
+            height: 0;
+        }
+        
+    }
+    &__all {
+        @include d-flex(row, nowrap, space-between, center);
+        width: 125px;
+        height: 50px;
+        overflow: hidden;
+        transition: height .5s linear, color .2s ease;
+        &.unselected{
+            height: 0;
+        }
+    }
+}
+.grid {
+    &__celdas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        gap: 3.1em;
+        @media screen and (max-width:1025px){
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+        @media screen and (max-width:769px){
+            grid-template-columns: 1fr;
+            
+        }
+        
+    }
+    &__celda {
+        // background: red;
+        // width: 3em;
+        // height: 3em;
+        // position: relative;
+        // top: 0;
+        // z-index: 100000000000;
+        &:hover .grid__img{
+            filter: grayscale(0%);
+        }
+        opacity: 0;
+        transition: opacity .5s linear;
+        &.visible{
+            opacity: 1;
+        }
+    }
+    &__cont {
+    }
+    &__img {
+        filter: grayscale(100%);
+        transition: .5s ease all;
+        @media (max-width:768px) {
+            filter: grayscale(0%);
+        }
+    }
+    &__texto {
+        @include d-flex (column, nowrap, flex-start,flex-start);
+        padding: 2em 0;
+    }
+    &__fecha {
+        color: var(--color-subtexto);
+        font-family: var(--f-principal);
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+
+    }
+    &__event {
+        color: var(--color-texto);
+        font-family: var(--f-principal);
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+}
+.footer {
+    &__social {
+    }
+    &__faq {
+    }
+    &__copy {
+    }
+}
+.social {
+    &__wrap {
+    }
+    &__grid {
+    }
+    &__celda {
+    }
+    &__svg {
+    }
+    &__boton {
+    }
+}
+.izq {
+}
+.dcha {
+}
+.faq {
+    &__wrap {
+    }
+    &__grid {
+    }
+    &__celda {
+    }
+    &__span {
+    }
+}
+.copy {
+    &__span {
+    }
+}
+
+.signin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    font-family: var(--f-principal);
+    font-weight: 900;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity .5s ease;
+    &.oculto{
+        opacity: 0;
+        pointer-events: none;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+    }
+    &__close {
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        color: var(--c-color-texto);
+        @include d-flex(row, nowrap, center, center);
+        cursor: pointer;
+        transition: .3s ease all;
+        text-transform: uppercase;
+        &:hover{
+            .signin__span{
+                color: var(--color-subtexto);
+            }
+            .signin__svg{
+                fill: var(--color-subtexto);
+            }
+        }
+    }
+    &__span {
+        color: var(--color-texto);
+        margin-right: .5em;
+        letter-spacing: -1px;
+        font-size: 100%;
+        transition: .3s ease all;
+
+    }
+    &__svg {
+        color: var(--color-texto);
+        fill: var(--color-texto);
+        width: 2em;
+        height: 2em;
+        border: 1px var(--color-texto) solid;
+        display: block;
+        transition: .3s ease all;
+
+    }
+    &__main {
+        width: 50%;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        color: var(--color-texto);
+        @include d-flex(column, nowrap, center, center);
+        text-transform: uppercase;
+    }
+    &__titulo {
+        font-size: 500%;
+        line-height: 1em;
+        font-style: italic;
+        letter-spacing: -.05em;
+    }
+    &__subtitulo {
+        font-style: italic;
+        font-size: 150%;
+        margin: 1em 0;
+    }
+    &__texto {
+        max-width: 24em;
+        width: 100%;
+        // background: red;
+        text-align: center;
+    }
+    &__social {
+        @include d-flex(row, nowrap, space-between, center);
+        width: 16em;
+        margin: 3em 0;
+        &--caja {
+            width: 3em;
+            height: 3em;
+            background-color: var(--color-principal);
+            @include d-flex (row, nowrap, center, center);
+        }
+        &--svg {
+            height: 1.5em;
+            width: 1.5em;
+        }
+    }
+    &__form {
+    }
+    &__caja{
+        width: 1.5em;
+        height: 1.5em;
+        background: var(--color-principal);
+        display: block;
+        margin-right: .5em;
+        border-radius: 2px;
+        @include d-flex(column, nowrap, center, center);
+    }
+    &__priv {
+        margin: 2em 0;
+        @include d-flex(column, nowrap, center, center);
+    }
+    &__seriously {
+        color: var(--color-subtexto);
+        font-style: italic;
+        font-size: 120%;
+    }
+    &__barra {
+        width: 100%;
+        height: 2px;
+        background: var(--color-subtexto);
+        margin: 1em 0;
+    }
+    &__links {
+        @include d-flex(row, nowrap, center, center);
+        
+    }
+    &__a {
+        margin: 0 1em;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &__tick{
+        width: 1.5em;
+        height: 1.5em;
+        display: none;
+    }
+}
+#check{
+    display: none;
+    &:checked + .signin__caja .signin__tick{
+        display: block;
+    }
+}
+#label{
+    @include d-flex(row, nowrap, center, center)
+
+}

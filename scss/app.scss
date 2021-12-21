@@ -1,10 +1,16 @@
-@import '_variables' , '_reset' , '_mixins' , '_keyframes';
+@import "_variables", "_reset", "_mixins", "_keyframes";
 
 /* Home de Sergio */
-@import '_home';
+@import "_home";
 
 /* Home de Pablo */
-@import '_news';
+@import "_news";
 
 /* Home de Alba */
-@import '_about';
+@import "_about";
+
+// header       margin bottom 120px
+// main         max-width: 1800px, padding 30 width 100%
+// main header  margin top 50px
+// footer       padding top bot 50px
+// footersocial width 300px

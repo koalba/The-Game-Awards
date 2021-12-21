@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,9 +11,364 @@
     <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css" />
     <script defer src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-    <script defer src="js/app.js"></script>
-  </head>
-  
-  <body class="news">
-  </body>
+    <script defer src="js/news/app.js"></script>
+</head>
+
+<body class="news">
+    
+    <aside class="signin oculto">
+        <img src="assets/news/img/TGA21_Superhero_Ambient_004_Dark_Gray.jpg" alt="" class="signin__bg">
+        <div class="signin__close">
+            <div class="signin__span">Cerrar</div>
+            <svg class="signin__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>
+        <div class="signin__main">
+            <span class="signin__titulo">Sign in</span><span class="signin__subtitulo">To Vote & Save Progress</span><span class="signin__texto">The Game Awards can track your voting, badges and give you access to special features.</span>
+            <div class="signin__social">
+                <a href="#" class="signin__social--caja">
+                    <svg class="signin__social--svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                    </svg>
+                </a>
+                <a href="#" class="signin__social--caja">
+                    <svg class="signin__social--svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                </a>
+                <a href="#" class="signin__social--caja">
+                    <svg class="signin__social--svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                        <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                    </svg>
+                </a>
+                <a href="#" class="signin__social--caja">
+                    <svg class="signin__social--svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                        <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                        <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                    </svg>
+                </a>
+            </div>
+            <form method="get" class="signin__form">
+                <label for="check" id="label">
+                    <input type="checkbox" name="check" id="check">
+                    <span class="signin__caja">
+                        <svg class="signin__tick" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                        </svg></span>
+                    <span class="signin__checklabel">
+                    Sign me up for the mailing list
+                    </span>
+                </label>
+            </form>
+            <div class="signin__priv">
+                <div class="signin__seriously">We Take Your Privacy Seriously</div>
+                <span class="signin__barra"></span>
+                <div class="signin__links">
+                    <a href="#" class="signin__a">
+                        Privacy
+                    </a>
+                    <a href="#" class="signin__a">
+                        Terms
+                    </a>
+                    <a href="#" class="signin__a">
+                        Cookies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <header class="header">
+        <div class="header__wrap">
+            <div class="header__left">
+                <h1 class="header__h1">
+                    <svg class="h-auto w-50" xmlns="http://www.w3.org/2000/svg" width="41.632" height="43.297"><path d="m31.229 29.993 1.913-1.848 1.9-5.674-3.8 3.8Zm-4.051-7.512 11.09-11.08-1.58 5.362-9.521 9.274Zm-4.062-3.965-.011 3.546 16.947-16.7 1.58-5.363ZM8.6 28.188l2.45 2.407-1.257 1.257.978 2.558 2.074-2.042 2.257 2.225-3.073 3.063 1 2.536 3.879-3.826 2.139 2.106-4.825 4.825h3.729l3-2.955 3 2.955h3.546L6.649 22.47ZM1.593 5.363 19 22.621l-.011.011-.011 3.546 1.816-1.784 2.332 2.311-.011 3.385 1.73-1.676 2.375 2.354v3.245l1.655-1.612 2.02 2 .989-2.547L0 .011Zm3.428 11.563 9.9 9.79-.011 3.536 1.795-1.773 2.278 2.257-.011 3.482 1.784-1.73 2.364 2.343v3.278l1.666-1.623 3.815 3.783.989-2.547L3.444 11.565Z" fill="#fff"></path>
+                    </svg>
+                </h1>
+                <nav class="header__nav">
+                    <ul class="header__ul">
+                        <li class="header__li"><a href="#" class="header__a">Home</a></li>
+                        <li class="header__li"><a href="#" class="header__a">News</a></li>
+                        <li class="header__li"><a href="#" class="header__a">About</a></li>
+                        <li class="header__li"><a href="#" class="header__a">Rewind</a></li>
+                        <li class="header__li"><a href="#" class="header__a">Watch</a></li>
+                        <li class="header__li"><a href="#" class="header__a">Jury</a></li>
+                        <li class="header__li"><a href="#" class="header__a">Nominees</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+                <nav class="header__nav">
+                    <a href="#" class="header__a--signin">
+                        <span class="header__span">Sign in</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="header__signin" viewBox="0 0 30 32"><path d="M10,10V8A6,6,0,1,1,22,8v2a1,1,0,0,0,1,1v2h2V11a2,2,0,0,0-1-1.73V8A8,8,0,1,0,8,8V9.27A2,2,0,0,0,7,11v2a2,2,0,0,0,1,1.75,8.07,8.07,0,0,0,4,6.16V22.3L4.7,25c-.91.23-4.7,1.37-4.7,4v2a1,1,0,0,0,1,1H15V30H2V29c0-.78,1.92-1.7,3.24-2h.11l8-3A1,1,0,0,0,14,23V20.31a1,1,0,0,0-.57-.9A6,6,0,0,1,10,14a1,1,0,0,0-1-1V11A1,1,0,0,0,10,10Z" fill="#fff"/><path d="M29,16H19a1,1,0,0,0-1,1V27a1,1,0,0,0,.63.93l5,2a1,1,0,0,0,.74,0l5-2A1,1,0,0,0,30,27V17A1,1,0,0,0,29,16ZM23,27.52l-3-1.2V20h3Zm5-1.2-3,1.2V20h3Z"/></svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__bg"></div>
+        <div class="main__wrap">
+            <header class="main__header">
+                <span class="main__news">News</span>
+                <div class="main__selector selector">
+                    <span class="selector__span">Show stories from</span>
+                    <ul class="selector__ul">
+                        <li class="selector__all">
+                            <p class="selector__fechas--titulo">ALL</p>
+                        </li>
+                        <li class="selector__li">
+                            <p class="selector__fechas">2021</p>
+                        </li>
+                        <li class="selector__li">
+                            <p class="selector__fechas">2020</p>
+                        </li>
+                        <li class="selector__li">
+                            <p class="selector__fechas">2019</p>
+                        </li>
+                        <li class="selector__li">
+                            <p class="selector__fechas">2018</p>
+                        </li>
+                        <li class="selector__li">
+                            <p class="selector__fechas">2017</p>
+                        </li>
+                    </ul>
+                    <svg class="selector__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                      </svg>
+                </div>
+            </header>
+            <div class="main__grid grid">
+                <div class="grid__celdas">
+
+                    <div class="grid__celda" data-year="2021">
+                        <div class="grid__cont"><img src="assets/news/img/TGA21_spotify.jpg" alt="Spotify" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 22, 2021</span>
+                            <span class="grid__event">Spotify Named Official Audio Streaming Partner</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2021">
+                        <div class="grid__cont"><img src="assets/news/img/share.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 16, 2021</span>
+                            <span class="grid__event">DEATHLOOP AND RATCHET & CLANK: RIFT APART LEAD NOMINATIONS FOR THE GAME AWARDS 2021</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2021">
+                        <div class="grid__cont"><img src="assets/news/img/1111565-GAME-AWARDS-GIVEAWAY-1920x1080-2.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 3, 2021</span>
+                            <span class="grid__event">THE ULTIMATE AMD GIVEAWAY</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/share.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 17, 2020</span>
+                            <span class="grid__event">THE GAME AWARDS 2020 VIEWERSHIP INCREASES 84%</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_LATEST-PRESENTERS.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 9, 2020</span>
+                            <span class="grid__event">KEANU REEVES, CHRISTOPHER NOLAN, GAL GADOT LATEST PRESENTERS FOR THE GAME AWARDS</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_AMD-PRESENTS-1.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 9, 2020</span>
+                            <span class="grid__event">AMD Presents a Special Pre-Show Game Awards Panel</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_LG-WING-SPONSORS.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 9, 2020</span>
+                            <span class="grid__event">LG WING Sponsors Best Mobile Game Category at TGA 2020</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TIQ-Artcard.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 9, 2020</span>
+                            <span class="grid__event">THE GAME AWARDS PARTNERS WITH TRUTH</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_GAMEFEST_STREAMING.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 9, 2020</span>
+                            <span class="grid__event">THE GAME AWARDS FESTIVAL ON STEAM/XBOX/GEFORCE NOW</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_Social_Performer_EDDIEVEDDER_NewsStory_1920x1080.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 30, 2020</span>
+                            <span class="grid__event">Eddie Vedder to Perform at The Game Awards on December 10</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Heros_Adobe_V3.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 17, 2020</span>
+                            <span class="grid__event">TGA x ADOBE CREATIVE CHALLENGE</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_LPH_V1.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 17, 2020</span>
+                            <span class="grid__event">THE GAME AWARDS 2020 WELCOMES BACK COMPOSER LORNE BALFE TO CONDUCT THE LONDON PHILHARMONIC ORCHESTRA FROM ABBEY ROAD STUDIOS IN LONDON</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_004_exapnsion_india.jpg" alt="Spotify" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">October 29, 2020</span>
+                            <span class="grid__event">THE GAME AWARDS EXPANDS STREAMING AND BROADCAST FOOTPRINT IN INDIA</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_001_TUNEIN.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">October 21, 2020</span>
+                            <span class="grid__event">THURSDAY DECEMBER 10: THE GAME AWARDS ARE LIVE!</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_LATEST-PRESENTERS.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">October 21, 2020</span>
+                            <span class="grid__event">INNOVATION IN ACCESSIBILITY AWARD ADDED TO THE GAME AWARDS</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2020">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_003_GAMEFEST-copy.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">October 21, 2020</span>
+                            <span class="grid__event">THE GAME FESTIVAL TO RETURN THIS DECEMBER</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2019">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_LG-WING-SPONSORS.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 18, 2019</span>
+                            <span class="grid__event">THE GAMES AWARDS VIEWERSHIP ROCKETS UP 73% FOR 2019; OVER 45 MILLION LIVESTREAMS</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2019">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_Social_Performer_EDDIEVEDDER_NewsStory_1920x1080.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 11, 2019</span>
+                            <span class="grid__event">Introducing The Game Festival</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2019">
+                        <div class="grid__cont"><img src="assets/news/img/LFxTGA2019_Social_PerformerCard_SQUARE_Chvrches_no-content.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 4, 2019
+                            </span>
+                            <span class="grid__event">Chvrches to Perform Live at The Game Awards</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2019">
+                        <div class="grid__cont"><img src="assets/news/img/LFxTGA2019_Social_PerformerCard_SQUARE_Green_Day_V1R1.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 27, 2019</span>
+                            <span class="grid__event">Green Day To Perform Live at The Game Awards</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2019">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2019_NEWS_1080x1080_Fan_Vote_111819.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 18, 2019
+                            </span>
+                            <span class="grid__event">Fan Voting Now Open For The Game Awards</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2019">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_LATEST-PRESENTERS.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 18, 2019</span>
+                            <span class="grid__event">See The Game Awards Live In 53 Movie Theaters</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2019">
+                        <div class="grid__cont"><img src="assets/news/img/EJonr3QU4AAmtHl.jpeg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 18, 2019</span>
+                            <span class="grid__event">WD_BLACK To Serve as Official Storage Partner to TGA</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2018">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2019_PhilHarrison_NewsTile_01.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">March 27, 2018</span>
+                            <span class="grid__event">The Game Awards Welcomes Google’s Phil Harrison to Advisory Board</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2018">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_003_GAMEFEST-copy.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">December 29, 2018</span>
+                            <span class="grid__event">The Game Awards Doubles Viewership in 2018</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2017">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_News_Hero_LG-WING-SPONSORS.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">November 9, 2017</span>
+                            <span class="grid__event">The Game Awards Partners with Tencent for China Distribution</span></div>
+                    </div>
+                    <div class="grid__celda" data-year="2017">
+                        <div class="grid__cont"><img src="assets/news/img/TGA2020_Social_Performer_EDDIEVEDDER_NewsStory_1920x1080.jpg" alt="" loading="lazy" class="grid__img"></div>
+                        <div class="grid__texto">
+                            <span class="grid__fecha">October 10, 2017</span>
+                            <span class="grid__event">Introducing The Game Awards Orchestra</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__social social">
+            <div class="social__wrap">
+                <div class="social__grid">
+                    <div class="social__celda">
+                        <svg class="social__svg"></svg>
+                    </div>
+                    <div class="social__celda">
+                        <svg class="social__svg"></svg>
+                    </div>
+                    <div class="social__celda">
+                        <svg class="social__svg"></svg>
+                    </div>
+                    <div class="social__celda">
+                        <svg class="social__svg"></svg>
+                    </div>
+                    <div class="social__celda">
+                        <svg class="social__svg"></svg>
+                    </div>
+                    <div class="social__celda">
+                        <svg class="social__svg"></svg>
+                    </div>
+                </div>
+                <div class="social__boton izq"></div>
+                <div class="social__boton dcha"></div>
+            </div>
+        </div>
+        <div class="footer__faq faq">
+            <div class="faq__wrap">
+                <div class="faq__grid">
+                    <div class="faq__celda">
+                        <span class="faq__span"></span>
+                    </div>
+                    <div class="faq__celda">
+                        <span class="faq__span"></span>
+                    </div>
+                    <div class="faq__celda">
+                        <span class="faq__span"></span>
+                    </div>
+                    <div class="faq__celda">
+                        <span class="faq__span"></span>
+                    </div>
+                    <div class="faq__celda">
+                        <span class="faq__span"></span>
+                    </div>
+                    <div class="faq__celda">
+                        <span class="faq__span"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy copy">
+            <span class="copy__span"></span>
+        </div>
+    </footer>
+
+</body>
 </html>
