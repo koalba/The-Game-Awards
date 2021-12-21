@@ -1,6 +1,6 @@
 # The Game Awards
 ## Descripción
-Teamwork de la web (The Game Awards 2021)[https://thegameawards.com/] como ejercicio práctico de trabajo en equipo.
+Teamwork de la web [The Game Awards 2021](https://thegameawards.com/) como ejercicio práctico de trabajo en equipo.
 ## Tecnologías usadas en el proyecto
 En este proyecto ha sido creado con:
 * HTML5
